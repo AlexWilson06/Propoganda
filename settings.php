@@ -94,6 +94,7 @@ body {
 <body>
 
 <div class="navbar">
+  <a href="Index.php">Clicker</a>
   <a href="Feedback.php">Feedback</a>
   <a href="Statistics.php">Statistics</a>
   <a href="settings.php">Settings</a>
