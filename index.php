@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <title>Propoganda Clicker: Home Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,13 +25,21 @@ body {
 }
 /* Style the top navigation bar */
 .navbar {
+  display: flex;
+  background-color: #A23E48;
+  border: 2px solid black;
+  font-family: "Bebas Neue";
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 50px;
+}
+.navbar2 {
   overflow: hidden;
-  background-color: #333;
+  background-color: #273E47;
 }
 
 /* Style the navigation bar links */
 .navbar a {
-  float: left;
   display: block;
   color: white;
   text-align: center;
@@ -32,13 +49,12 @@ body {
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: white;
   color: black;
 }
 
 /* Column container */
 .row {  
-  display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
@@ -74,57 +90,15 @@ body {
   text-align: center;
   background: #ddd;
 }
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
 </style>
 </head>
 <body>
-
 <div class="navbar">
   <a href="Feedback.php">Feedback</a>
   <a href="Statistics.php">Statistics</a>
   <a href="settings.php">Settings</a>
   <a href="sign in.php">Sign In</a>
 </div>
-
-<div class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
-  </div>
-  <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
 </div>
 </body>
 </html>
