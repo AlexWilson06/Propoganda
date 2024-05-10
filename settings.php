@@ -22,6 +22,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: #00A6ED;
 }
 /* Style the top navigation bar */
 .navbar {
@@ -87,12 +88,15 @@ body {
   width: 100%;
   padding: 20px;
 }
-
-/* Footer */
-.footer {
-  padding: 20px;
+.Title {
+  background-color: #F9DB6D;
+  border: 2px solid black;
+  font-family: "Bebas Neue";
+  font-size: 100px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
   text-align: center;
-  background: #ddd;
 }
 </style>
 </head>
@@ -109,6 +113,9 @@ body {
   </div>
 </div>
 </div>
+</div>
+<div class="Title">
+<a>Settings</a>
 </div>
 </body>
 </html>

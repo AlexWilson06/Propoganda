@@ -16,12 +16,14 @@
 
 * {
   box-sizing: border-box;
+  text-align: center;
 }
 
 /* Style the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: #00A6ED;
 }
 /* Style the top navigation bar */
 .navbar {
@@ -91,12 +93,12 @@ body {
   background: #ddd;
 }
 .clickerbar {
-  display: flex;
-  background-color: #A23E48;
+  background-color: #F9DB6D;
   border: 2px solid black;
   font-family: "Bebas Neue";
-  font-size: 73.975px;
-  margin-left: 18.2%;
+  font-size: 30px;
+  margin-right: 81.5%;
+  margin-top: -10.4%;
 }
 </style>
 </head>
@@ -110,8 +112,7 @@ body {
   </div>
 </div>
 <div class="clickerbar">
-  <p>Name(placeholder)</p>
-  <p>Money:(link to money)</p>
+  <p><br><br>Name:<br>(placeholder)<br>Money:<br>(link to money)</p>
 </div>
 </body>
 </html>

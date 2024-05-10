@@ -22,6 +22,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: #00A6ED;
 }
 /* Style the top navigation bar */
 .navbar {
@@ -88,11 +89,29 @@ body {
   padding: 20px;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
+.Title {
+  background-color: #F9DB6D;
+  border: 2px solid black;
+  font-family: "Bebas Neue";
+  font-size: 100px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
   text-align: center;
-  background: #ddd;
+}
+.MainFeedbackSection {
+  background-color: #F9DB6D;
+  border: 2px solid black;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.Section2 {
+  background-color: #F9DB6D;
+  border: 2px solid black;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
 }
 </style>
 </head>
@@ -108,6 +127,14 @@ body {
   <a href="sign in.php">Sign In</a>
   </div>
 </div>
+<div class="Title">
+<a>Feedback</a>
+</div>
+<div class="MainFeedbackSection">
+<a>Complaint Form</a>
+</div>
+<div class="Section2">
+<a>Reveiw Form</a>
 </div>
 </div>
 </body>
