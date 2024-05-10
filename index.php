@@ -8,24 +8,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+/* adding in font */
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
+/* Making general css rules */
 * {
   box-sizing: border-box;
   text-align: center;
 }
-
 /* Style the body */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background-color: #00A6ED;
 }
-/* Style the top navigation bar */
+/* Style the red section of the navigation bar */
 .navbar {
   display: flex;
   background-color: #A23E48;
@@ -34,11 +34,11 @@ body {
   font-size: 73.975px;
   margin-left: 18.2%;
 }
+/* Style the black sections of the navigation bar */
 .navbar2 {
   overflow: hidden;
   background-color: #273E47;
 }
-
 /* Style the navigation bar links */
 .navbar a {
   display: block;
@@ -48,50 +48,12 @@ body {
   padding: 14px 20px;
   text-decoration: none;
 }
-
 /* Change color on hover */
 .navbar a:hover {
   background-color: white;
   color: black;
 }
-
-/* Column container */
-.row {  
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
+/* Attempt at doing clicker bar(talk to teacher about better way) */
 .clickerbar {
   background-color: #F9DB6D;
   border: 2px solid black;
@@ -108,7 +70,7 @@ body {
   <a href="Statistics.php">Statistics</a>
   <a href="settings.php">Settings</a>
   <div class="navbar2">
-  <a href="sign in.php">Sign In</a>
+    <a href="sign in.php">Sign In</a>
   </div>
 </div>
 <div class="clickerbar">
