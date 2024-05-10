@@ -29,9 +29,8 @@ body {
   background-color: #A23E48;
   border: 2px solid black;
   font-family: "Bebas Neue";
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 50px;
+  font-size: 73.975px;
+  margin-left: 18.2%;
 }
 .navbar2 {
   overflow: hidden;
@@ -41,7 +40,8 @@ body {
 /* Style the navigation bar links */
 .navbar a {
   display: block;
-  color: white;
+  border-left: 2px solid black;
+  color: black;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
@@ -90,6 +90,14 @@ body {
   text-align: center;
   background: #ddd;
 }
+.clickerbar {
+  display: flex;
+  background-color: #A23E48;
+  border: 2px solid black;
+  font-family: "Bebas Neue";
+  font-size: 73.975px;
+  margin-left: 18.2%;
+}
 </style>
 </head>
 <body>
@@ -97,8 +105,13 @@ body {
   <a href="Feedback.php">Feedback</a>
   <a href="Statistics.php">Statistics</a>
   <a href="settings.php">Settings</a>
+  <div class="navbar2">
   <a href="sign in.php">Sign In</a>
+  </div>
 </div>
+<div class="clickerbar">
+  <p>Name(placeholder)</p>
+  <p>Money:(link to money)</p>
 </div>
 </body>
 </html>
