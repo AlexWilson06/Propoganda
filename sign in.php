@@ -79,6 +79,8 @@ body {
 </div>
 <div class="Title">
   <p>Sign In</p>
+  <p>Email</p>
+  <p>Password</p>
 </div>
 </body>
 </html>
