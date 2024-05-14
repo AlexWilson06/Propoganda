@@ -23,9 +23,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background-color: #00A6ED;
-/* Hiding scroll bar for internet explorer, edge and firefox (cant work it for other browser, need to find other solution*/
-  -ms-overflow-style: none;
-  scrollbar-width: none; 
 }
 /* Style the top navigation bar */
 .navbar {
