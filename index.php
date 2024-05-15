@@ -27,6 +27,8 @@
       <a href="settings.php">Settings</a>
     <div class="navbar2">
       <a href="sign in.php">Sign In</a>
+    </div>
+  </div>
       <div class="purchasebar">
 <div class="Cost">
     <p>cost</p>
@@ -51,7 +53,5 @@
 </div>
 </div>
     </div>
-  </div>
-  </div>
 </body>
 </html>
