@@ -7,13 +7,13 @@
 <title>Propoganda Clicker: Feedback Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 <style>
 </style>
 </head>
 <body>
-<div class="Collumns">
-  <div class="Collumn1">
+<div class="FeedbackCollumns">
+  <div class="FeedbackCollumn1">
 <div class="navbarother">
   <div class="navbarother2">
     <a href="index.php">Clicker</a>
@@ -26,8 +26,8 @@
   </div>
 </div>
 </div>
-<div class="Collumn2">
-<div class="Title">
+<div class="FeedbackCollumn2">
+<div class="FeedbackTitle">
   <a>Feedback</a>
 </div>
 <div class="MainFeedbackSection">

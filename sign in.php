@@ -7,7 +7,7 @@
 <title>Propoganda Clicker: Sign In Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 <style>
 </style>
 </head>
@@ -23,7 +23,7 @@
     <a href="sign in.php">Sign In</a>
   </div>
 </div>
-<div class="Title">
+<div class="SignInTitle">
   <p>Sign In</p>
   <p>Email</p>
   <p>Password</p>

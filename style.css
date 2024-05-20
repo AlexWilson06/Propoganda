@@ -48,12 +48,24 @@
   /* HOME PAGE */
 
   /* Style the red section of the navigation bar */
+  .Collumns {
+    display: block;
+    width: 100%;
+  }
+  .Collumn1 {
+    display: block;
+    width: 20%;
+  }
+  .Collumn2 {
+    display: block;
+    width: 80%;
+  }
   .navbar {
     display: flex;
     background-color: #A23E48;
     border: 2px solid black;
     font-family: "Bebas Neue";
-    font-size: 73.975px;
+    font-size: 70px;
     margin-left: 18.2%;
   }
   /* Style the black sections of the navigation bar */
@@ -96,7 +108,7 @@
   /* FEEDBACK PAGE */
 
   /* title of section */
-.Title {
+.FeedbackTitle {
   background-color: #F9DB6D;
   border: 2px solid black;
   font-family: "Bebas Neue";
@@ -126,7 +138,7 @@
   /* SETTINGS PAGE */
 
   /* title of page */
-.Title {
+.SettingsTitle {
   background-color: #F9DB6D;
   border: 2px solid black;
   font-family: "Bebas Neue";
@@ -137,7 +149,7 @@
   text-align: center;
 }
 /* Section encompassing settings */
-.Body {
+.SettingsBody {
   background-color: #F9DB6D;
   border: 2px solid black;
   font-family: "Bebas Neue";
@@ -151,11 +163,11 @@
   flex-wrap: wrap;
 }
 /* change font size */
-.Body a{
+.SettingsBody a{
   font-size: 75px;
 }
 /* save button */
-.Save {
+.SettingsSave {
   background-color: white;
   border: 2px solid black;
   border-radius: 30px;
@@ -208,7 +220,7 @@
   text-align: center;
 }
 /* allows the flex to break into new row */
-.break {
+.Settingsbreak {
   flex-basis: 100%;
   height: 0;
 }
@@ -216,7 +228,7 @@
 /* SIGN IN PAGE */
 
 /* title of page */
-.Title {
+.SignInTitle {
   background-color: #F9DB6D;
   border: 2px solid black;
   font-family: "Bebas Neue";
@@ -231,7 +243,7 @@
 /* STATISTICS PAGE */
 
 /* title of page */
-.Title {
+.StatisticsTitle {
   background-color: #F9DB6D;
   border: 2px solid black;
   font-family: "Bebas Neue";

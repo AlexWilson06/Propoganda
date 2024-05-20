@@ -7,7 +7,7 @@
 <title>Propoganda Clicker: Settings Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 <style>
 </style>
 </head>
@@ -24,11 +24,11 @@
     </div>
   </div>
 </div>
-<div class="Title">
+<div class="SettingsTitle">
 <a>Settings</a>
 </div>
-<div class="Body">
-  <div class="Save">
+<div class="SettingsBody">
+  <div class="SettingsSave">
     <a>Save</a><br>
   </div>
   <div class="break"></div>
@@ -41,7 +41,7 @@
       <a>(==|======)</a>
     </div>
   <a>Brightness Bar</a>
-  <div class="break"></div>
+  <div class="Settingsbreak"></div>
     <div class="Wipe">
       <a>wipe</a>
     </div>
