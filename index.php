@@ -29,6 +29,10 @@
       <a href="sign in.php">Sign In</a>
     </div>
   </div>
+      <div class="CountryImage">
+        <img src="media/BaseCountry.png" alt="broken :(">
+        
+      </div>
       <div class="purchasebar">
 <div class="Cost">
     <p>cost</p>
@@ -54,4 +58,8 @@
 </div>
     </div>
 </body>
+<?php
+echo "<p>Copyright Alexander Jack Wilson 2006-20" . date("y") . " Propaganda.com</p>";
+?>
 </html>
+

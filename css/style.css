@@ -14,7 +14,7 @@
   body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #00A6ED;
+    background-color: #00A8F3;
   }
   /* navigation bar (all pages bar index) */
   .navbarother {
@@ -23,7 +23,6 @@
     border: 2px solid black;
     font-family: "Bebas Neue";
     font-size: 73.975px;
-    margin-left: 18.2%;
   }
   /* Style the black sections of the navigation bar */
   .navbarother2 {
