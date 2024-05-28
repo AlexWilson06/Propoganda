@@ -31,7 +31,9 @@
   </div>
       <div class="CountryImage">
         <img src="media/BaseCountry.png" alt="broken :(">
-        
+      </div>
+      <div class="Leaderboard">
+      <p>Leaderboard</p>
       </div>
       <div class="purchasebar">
 <div class="Cost">
@@ -51,8 +53,8 @@
   </div>
   <div class="Upgradetext">
     <p>Upgrade Country</p>
+    <div class="Rebirth">
   </div>
-  <div class="Clickerbox">
   </div>
 </div>
 </div>
