@@ -20,9 +20,9 @@
   .navbarother {
     display: flex;
     background-color: #A23E48;
-    border: 2px solid black;
+    border: 0.5vh solid black;
     font-family: "Bebas Neue";
-    font-size: 73.975px;
+    font-size: 74px;
   }
   /* Style the black sections of the navigation bar */
   .navbarother2 {
@@ -32,10 +32,10 @@
   /* Style the navigation bar links */
   .navbarother a {
     display: block;
-    border-left: 2px solid black;
+    border-left: 0.5vh solid black;
     color: black;
     text-align: center;
-    padding: 14px 20px;
+    padding: 3.5vh 5vh;
     text-decoration: none;
   }
   /* Change color on hover */
@@ -54,10 +54,10 @@
   .navbar {
     display: flex;
     background-color: #A23E48;
-    border: 2px solid black;
+    border: 0.5vh solid black;
     font-family: "Bebas Neue";
-    font-size: 70px;
-    margin-left: -2px;
+    font-size: 11.33vh;
+    margin-left: -0.5vh;
   }
   /* Style the black sections of the navigation bar */
   .navbar2 {
@@ -67,7 +67,7 @@
   /* Style the navigation bar links */
   .navbar a {
     display: block;
-    border-right: 2px solid black;
+    border-right: 0.5vh solid black;
     color: black;
     text-align: center;
     padding: 14px 20px;
@@ -81,62 +81,64 @@
   /* Attempt at doing clicker bar(talk to teacher about better way) */
   .clickerbar {
     background-color: #F9DB6D;
-    border: 2px solid black;
+    border: 0.5vh solid black;
     font-family: "Bebas Neue";
-    font-size: 30px;
-    height: 101vh;
+    font-size: 4.5vh;
+    height: 100vh;
   }
   .Clickerbox {
     background-color: #A23E48;
     height: 30vh;
     width: 30vh;
-    border: 2px solid black;
+    border: 0.5vh solid black;
     border-radius: 50%;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-left: 2vh;
+    margin-right: 2vh;
   }
   /* Country image */
   .CountryImage {
-    object-fit: fill;
+    object-fit: cover;
     rotate: -90deg;
   }
   .CountryImage img {
     height: 51vh;
     width: 51vh;
   }
+  .Leaderboard {
+    background-color: white;
+    border: 0.5vh solid black;
+    border-radius: 10vh 10vh 10vh 10vh;
+    margin: 2vh;
+    align-self: right;
+    width: 20vh;
+  }
   /* upgrade bar and rebirth button */
   .purchasebar {
     display: flex;
     background-color: white;
-    border: 2px solid black;
+    border: 0.5vh solid black;  
   }
   .Cost {
-    display: row;
-    border-right: 2px solid black;
-    margin-right: 10px;
+    flex-direction: column;
     margin-left: 10px;
   }
   .Upgrade {
-    border-right: 2px solid black;
+    border-right: 0.5vh solid black;
   }
   .Infobutton {
     margin-right: 10px;
     margin-left: 10px;
   }
-  .Infobutton p {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-  }
   .Upgradetext {
     display: row;
     background-color: #F9DB6D;
-    border-left: 2px solid black;
+    border-left: 0.5vh solid black;
   }
   .Rebirth {
-    background-color: #A23E48;
-    height: 20vh;
-    width: 20vh;
-    border: 2px solid black;
+    background-color: #273E47;
+    height: 15vh;
+    width: 15vh;
+    border: 0.5vh solid black;
     border-radius: 50%;
     margin: 2vh;
   }

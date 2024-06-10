@@ -29,27 +29,42 @@
       <a href="sign in.php">Sign In</a>
     </div>
   </div>
-      <div class="CountryImage">
-        <img src="media/BaseCountry.png" alt="broken :(">
-      </div>
       <div class="Leaderboard">
       <p>Leaderboard</p>
       </div>
       <div class="purchasebar">
-<div class="Cost">
+        <div class="Cost">
+<div class="Cost1">
     <p>cost</p>
+</div>
+  <div class="Cost2">
     <p>cost</p>
+</div>
+<div class="Cost3">
     <p>cost</p>
-  </div>
-  <div class="Upgrade">
+</div>
+</div>
+<div class="Upgrade">
+  <div class="Upgrade1">
     <p>patriotism levels</p>
+  </div>
+  <div class="Upgrade2">
     <p>Increase workers</p>
+  </div>
+  <div class="Upgrade3">
     <p>corruption levels</p>
   </div>
+  </div>
   <div class="Infobutton">
+  <div class="Infobutton1">
     <p>I</p>
+  </div>
+  <div class="Infobutton2">
     <p>I</p>
+  </div>
+  <div class="Infobutton3">
     <p>I</p>
+  </div>
   </div>
   <div class="Upgradetext">
     <p>Upgrade Country</p>
@@ -61,7 +76,7 @@
     </div>
 </body>
 <?php
-echo "<p>Copyright Alexander Jack Wilson 2006-20" . date("y") . " Propaganda.com</p>";
+
 ?>
 </html>
 
