@@ -22,7 +22,7 @@
   </div>
   <div class="Collumn2">
     <div class="navbar">
-      <a href="Feedback.php">Feedback</a>
+      <a href="contact.php">Feedback</a>
       <a href="Statistics.php">Statistics</a>
       <a href="settings.php">Settings</a>
     <div class="navbar2">
@@ -35,35 +35,35 @@
       <div class="purchasebar">
         <div class="Cost">
 <div class="Cost1">
-    <p>cost</p>
+    <button>cost</button>
 </div>
   <div class="Cost2">
-    <p>cost</p>
+  <button>cost</button>
 </div>
 <div class="Cost3">
-    <p>cost</p>
+<button>cost</button>
 </div>
 </div>
 <div class="Upgrade">
   <div class="Upgrade1">
-    <p>patriotism levels</p>
+    <button>patriotism levels</button>
   </div>
   <div class="Upgrade2">
-    <p>Increase workers</p>
+    <button>Increase workers</button>
   </div>
   <div class="Upgrade3">
-    <p>corruption levels</p>
+    <button>corruption levels</button>
   </div>
   </div>
   <div class="Infobutton">
   <div class="Infobutton1">
-    <p>I</p>
+    <button>I</button>
   </div>
   <div class="Infobutton2">
-    <p>I</p>
+    <button>I</button>
   </div>
   <div class="Infobutton3">
-    <p>I</p>
+    <button>I</button>
   </div>
   </div>
   <div class="Upgradetext">
