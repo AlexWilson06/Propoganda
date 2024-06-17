@@ -30,40 +30,40 @@
     </div>
   </div>
       <div class="Leaderboard">
-      <p>Leaderboard</p>
+      <button class="BtnLB">Leaderboard</button>
       </div>
       <div class="purchasebar">
         <div class="Cost">
 <div class="Cost1">
-    <button>cost</button>
+    <button class="btn">cost</button>
 </div>
   <div class="Cost2">
-  <button>cost</button>
+  <button class="btn">cost</button>
 </div>
 <div class="Cost3">
-<button>cost</button>
+<button class="btn">cost</button>
 </div>
 </div>
 <div class="Upgrade">
   <div class="Upgrade1">
-    <button>patriotism levels</button>
+    <button class="btn">patriotism levels</button>
   </div>
   <div class="Upgrade2">
-    <button>Increase workers</button>
+    <button class="btn">Increase worker</button>
   </div>
   <div class="Upgrade3">
-    <button>corruption levels</button>
+    <button class="btn">corruption levels</button>
   </div>
   </div>
   <div class="Infobutton">
   <div class="Infobutton1">
-    <button>I</button>
+    <button class="btn">I</button>
   </div>
   <div class="Infobutton2">
-    <button>I</button>
+    <button class="btn">I</button>
   </div>
   <div class="Infobutton3">
-    <button>I</button>
+    <button class="btn">I</button>
   </div>
   </div>
   <div class="Upgradetext">
