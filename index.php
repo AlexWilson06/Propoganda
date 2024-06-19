@@ -30,7 +30,7 @@
     </div>
   </div>
       <div class="Leaderboard">
-      <button class="BtnLB">Leaderboard</button>
+      <a href="Leaderboard.php">Leaderboard</a>
       </div>
       <div class="purchasebar">
         <div class="Cost">

@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Propoganda Clicker: Feedback</title>
 </head>
 <body>
+<div class="navbarother">
+  <div class="navbarother2">
+    <a href="index.php">Clicker</a>
+  </div>
+  <a href="contact.php">Feedback</a>
+  <a href="Statistics.php">Statistics</a>
+  <a href="settings.php">Settings</a>
+  <div class="navbarother2">
+    <a href="sign in.php">Sign In</a>
+  </div>
+</div>
 <div class="container">
   <form action="action_page.php" method="POST">
     <div class="row">

@@ -119,6 +119,21 @@
     margin: 4vh;
     margin-left: 61vw;
   }
+  .Leaderboard {
+    background-color: white;
+    border: black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-flex;
+    cursor: pointer;
+    align-self: right;
+    border-radius: 40px;
+    font-family: "Bebas Neue";
+    font-size: 40px;
+    margin: 4vh;
+    margin-left: 61vw;
+  }
   /* upgrade bar and rebirth button */
   .purchasebar {
     display: flex;
