@@ -12,22 +12,27 @@
 </style>
 </head>
 <body>
-<div class="Collumns">
-  <div class="Collumn1">
-  <div class="clickerbar">
-  <p><br><br>Name:<br>(placeholder)<br>Money:<br>(link to money)</p>
-  <div class="Clickerbox">
-  </div>
 </div>
   </div>
-  <div class="Collumn2">
+  <div class="MainCollumn">
+  <div class="MenuCollumn">
     <div class="navbar">
+      <div class="navbar2">
+      <a href="index.php">Clicker</a>
+      </div>
       <a href="contact.php">Feedback</a>
       <a href="Statistics.php">Statistics</a>
       <a href="settings.php">Settings</a>
+      </div>
     <div class="navbar2">
       <a href="sign in.php">Sign In</a>
+      </div>
     </div>
+    <div class="Section2"></div>
+    <div class="clickerbar">
+  <p><br><br>Name:<br>(placeholder)<br>Money:<br>(link to money)</p>
+  <div class="Clickerbox">
+  </div>
   </div>
       <div class="Leaderboard">
       <a href="Leaderboard.php">Leaderboard</a>
@@ -73,7 +78,7 @@
   </div>
 </div>
 </div>
-    </div>
+</div>
 </body>
 <?php
 

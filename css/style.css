@@ -47,22 +47,32 @@
   /* HOME PAGE */
 
   /* Style the red section of the navigation bar */
-  .Collumns {
-    display: flex;
+  .MainCollumn {
+    height: 100vh;
     width: 100vw;
+  }
+  .MenuCollumn {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
   }
   .navbar {
     display: flex;
     background-color: #A23E48;
     border: 0.5vh solid black;
     font-family: "Bebas Neue";
-    font-size: 11.33vh;
+    font-size: 11.35vh;
     margin-left: -0.5vh;
+    width: 100vw;
   }
   /* Style the black sections of the navigation bar */
   .navbar2 {
-    overflow: hidden;
+    font-family: "Bebas Neue";
+    font-size: 12vh;
+    margin-left: -0.5vh;
+    overflow: hidden;     
     background-color: #273E47;
+    width: 20vw;
   }
   /* Style the navigation bar links */
   .navbar a {
@@ -79,12 +89,16 @@
     color: black;
   }
   /* Attempt at doing clicker bar(talk to teacher about better way) */
+  .Section2 {
+    width: 20vw;
+  }
   .clickerbar {
     background-color: #F9DB6D;
     border: 0.5vh solid black;
     font-family: "Bebas Neue";
     font-size: 4.5vh;
-    height: 100vh;
+    height: 80vh;
+    width: 20vw;
   }
   .Clickerbox {
     background-color: #A23E48;
