@@ -63,7 +63,7 @@
     font-family: "Bebas Neue";
     font-size: 11.35vh;
     margin-left: -0.5vh;
-    width: 100vw;
+    width: 99vw;
   }
   /* Style the black sections of the navigation bar */
   .navbar2 {
@@ -74,7 +74,14 @@
     background-color: #273E47;
     width: 20vw;
   }
-  
+  .navbar3 {
+    font-family: "Bebas Neue";
+    font-size: 12vh;
+    margin-left: -0.5vh;
+    overflow: hidden;     
+    background-color: #273E47;
+    width: 20vw;
+  }
   /* Style the navigation bar links */
   .navbar a {
     display: block;

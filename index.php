@@ -19,9 +19,9 @@
       <a href="contact.php">Feedback</a>
       <a href="Statistics.php">Statistics</a>
       <a href="settings.php">Settings</a>
-      </div>
-    <div class="navbar2">
+      <div class="navbar2">
       <a href="sign in.php">Sign In</a>
+      </div>
       </div>
     </div>
     <div class="Section2"></div>
