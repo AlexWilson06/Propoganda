@@ -1,6 +1,25 @@
-/* Testing code */
-
-
+/* NavBar code */
+.navbarC {
+    display: flex;
+    background-color: red;
+    width: 100%;
+    outline: 1px black;
+}
+.navbarC a {
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    outline: black;
+}
+.navbarC a:first-child, .navbarC a:last-child {
+    background-color: #273E47;
+}
+.navbarC a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
 
 /* adding in font */
