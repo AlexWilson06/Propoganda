@@ -11,19 +11,9 @@
 </head>
 <title></title>
 <body>
-<div class="MenuCollumn">
-    <div class="navbar">
-      <div class="navbar2">
-      <a href="index.php">Clicker</a>
-      </div>
-      <a href="contact.php">Feedback</a>
-      <a href="Statistics.php">Statistics</a>
-      <a href="settings.php">Settings</a>
-      </div>
-    <div class="navbar2">
-      <a href="sign in.php">Sign In</a>
-      </div>
-    </div>
+<?php
+    include ('NavBar.php')
+    ?>
 <div class="SignInTitle">
   <p>Sign In</p>
   <p>Email</p>
