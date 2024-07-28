@@ -11,32 +11,34 @@
 </head>
 <body>
 <?php
-    include ('NavBar.php')
+    include ('NavBar.php');
+    include ('setup.php');
+    include ('process_form.php');
     ?>  
 <div class="container">
-  <form action="action_page.php" method="POST">
+  <form action="process_form.php" method="POST">
     <div class="row">
       <div class="col-25">
-        <label for="fname">First Name</label>
+        <label for="first_name">First Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="first_name" name="first_name" placeholder="Your name..">
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Last Name</label>
+        <label for="lastname">Last Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
       </div>
     </div>
-    <div class="row">
+      <div class="row">
       <div class="col-25">
         <label for="email">Email</label>
       </div>
       <div class="col-75">
-        <input type="text" id="email" name="Email" placeholder="Your Email..">
+        <input type="text" id="email" name="email" placeholder="Your email..">
       </div>
     </div>
     <div class="row">
@@ -45,27 +47,23 @@
       </div>
       <div class="col-75">
         <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-          <option value="usa">New Zealand</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="australia">Australia</option>
+            <option value="usa">USA</option>
         </select>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="subject">Subject</label>
+        <label for="message">Message</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
       </div>
     </div>
     <div class="row">
       <input type="submit" value="Submit">
     </div>
-  </form>
-</div>
-</div>
 </body>
 <style>
     /* Style inputs, select elements and textareas */

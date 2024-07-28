@@ -13,5 +13,10 @@
 <?php
     include ('NavBar.php')
     ?>
+    <div class="StatisticsInfo">
+    <?php
+    $paral ="These are your statistics. so far you have spread propaganda ___ times. Such a loyal citizen";
+    ?>
+    </div>
 </body>
 </html>

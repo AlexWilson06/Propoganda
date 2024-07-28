@@ -39,34 +39,6 @@
     margin: 0;
     background-color: #00A8F3;
   }
-  /* navigation bar (all pages bar index) */
-  .navbarother {
-    display: flex;
-    background-color: #A23E48;
-    border: 0.5vh solid black;
-    font-family: "Bebas Neue";
-    font-size: 74px;
-  }
-  /* Style the black sections of the navigation bar */
-  .navbarother2 {
-    overflow: hidden;
-    background-color: #273E47;
-  }
-  /* Style the navigation bar links */
-  .navbarother a {
-    display: block;
-    border-left: 0.5vh solid black;
-    color: black;
-    text-align: center;
-    padding: 3.5vh 5vh;
-    text-decoration: none;
-  }
-  /* Change color on hover */
-  .navbarother a:hover {
-    background-color: white;
-    color: black;
-  }
-
   /* HOME PAGE */
 
   /* Style the red section of the navigation bar */
