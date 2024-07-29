@@ -20,17 +20,9 @@
   <div class="SettingsSave">
     <a>Save</a><br>
   </div>
-  <div class="break"></div>
-    <div class="NumberShortening">
-      <a>(o) off</a>
-    </div>
-  <a>number shortening</a>
-  <div class="break"></div>
     <div class="Brightness">
       <a>(==|======)</a>
     </div>
-  <a>Brightness Bar</a>
-  <div class="Settingsbreak"></div>
     <div class="Wipe">
       <a>wipe</a>
     </div>

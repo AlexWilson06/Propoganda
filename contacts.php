@@ -15,6 +15,9 @@
     include ('setup.php');
     include ('process_form.php');
     ?>  
+<div class="ContactsTitle">
+<a>Feedback/Contact form</a>
+</div>
 <div class="container">
   <form action="process_form.php" method="POST">
     <div class="row">
@@ -46,7 +49,7 @@
         <label for="message">Message</label>
       </div>
       <div class="col-75">
-        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:140px"></textarea>
       </div>
     </div>
     <div class="row">
