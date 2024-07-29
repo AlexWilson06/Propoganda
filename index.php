@@ -19,6 +19,7 @@
                     <button id="clicker" class="circle-button"></button>
                 </div>
             </div>
+            <img src="media/BaseCountry.png" alt="Base Country" class="rotated-image">
         </div>
         <div class="Leaderboard">
             <a href="Leaderboard.php">Leaderboard</a>
