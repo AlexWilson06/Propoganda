@@ -1,197 +1,186 @@
-/* NavBar code */
+/* General styles */
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+body {
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #00A8F3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* Layout */
+.MainCollumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.MenuCollumn {
+  width: 100%;
+  display: flex;
+}
+.Section2 {
+  flex: 1;
+  display: flex;
+}
+/* Navigation bar */
 .navbarC {
-    display: flex;
-    background-color: red;
-    width: 100%;
-    outline: 1px black;
+  display: flex;
+  background-color: #A23E48;
+  width: 100%;
+  border: 1px solid black;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 .navbarC a {
-    color: white;
-    padding: 14px 20px;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    outline: black;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  flex: 1;
+  border: 0.25vh solid black;
 }
 .navbarC a:first-child, .navbarC a:last-child {
-    background-color: #273E47;
+  background-color: #273E47;
 }
 .navbarC a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
-
-
-/* adding in font */
-.bebas-neue-regular {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  /* Making general css rules */
-  * {
-    box-sizing: border-box;
-    text-align: center;
-  }
-  /* Style the body */
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: #00A8F3;
-  }
-  /* HOME PAGE */
-
-  /* Style the red section of the navigation bar */
-  .MainCollumn {
-    height: 100vh;
-    width: 100vw;
-  }
-  .MenuCollumn {
-    width: 100vw;
-    height: 20vh;
-    display: flex;
-  }
-  .navbar {
-    display: flex;
-    background-color: #A23E48;
-    border: 0.5vh solid black;
-    font-family: "Bebas Neue";
-    font-size: 11.35vh;
-    margin-left: -0.5vh;
-    width: 99vw;
-  }
-  /* Style the black sections of the navigation bar */
-  .navbar2 {
-    font-family: "Bebas Neue";
-    font-size: 12vh;
-    margin-left: -0.5vh;
-    overflow: hidden;     
-    background-color: #273E47;
-    width: 20vw;
-  }
-  .navbar3 {
-    font-family: "Bebas Neue";
-    font-size: 12vh;
-    margin-left: -0.5vh;
-    overflow: hidden;     
-    background-color: #273E47;
-    width: 20vw;
-  }
-  /* Style the navigation bar links */
-  .navbar a {
-    display: block;
-    border-right: 0.5vh solid black;
-    color: black;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: white;
-    color: black;
-  }
-  /* Attempt at doing clicker bar(talk to teacher about better way) */
-  .Section2 {
-    width: 20vw;
-  }
-  .clickerbar {
-    background-color: #F9DB6D;
-    border: 0.5vh solid black;
-    font-family: "Bebas Neue";
-    font-size: 4.5vh;
-    height: 80vh;
-    width: 20vw;
-  }
-  .Clickerbox {
-    background-color: #A23E48;
-    height: 30vh;
-    width: 30vh;
-    border: 0.5vh solid black;
-    border-radius: 50%;
-    margin-left: 2vh;
-    margin-right: 2vh;
-  }
-  /* Country image */
-  .CountryImage {
-    object-fit: cover;
-    rotate: -90deg;
-  }
-  .CountryImage img {
-    height: 51vh;
-    width: 51vh;
-  }
-  .BtnLB {
-    background-color: white;
-    border: black;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-flex;
-    cursor: pointer;
-    align-self: right;
-    border-radius: 40px;
-    font-family: "Bebas Neue";
-    font-size: 40px;
-    margin: 4vh;
-    margin-left: 61vw;
-  }
-  .Leaderboard {
-    background-color: white;
-    border: black;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-flex;
-    cursor: pointer;
-    align-self: right;
-    border-radius: 40px;
-    font-family: "Bebas Neue";
-    font-size: 40px;
-    margin: 4vh;
-    margin-left: 61vw;
-  }
-  /* upgrade bar and rebirth button */
-  .purchasebar {
-    display: flex;
-    background-color: white;
-    border: 0.5vh solid black;  
-  }
-  .Cost {
-    flex-direction: column;
-    width: 10vw;
-    font-family: "Bebas Neue";
-  }
-  .Cost button{
-     font-size: 40px;
-  }
-  .Upgrade button {
-    font-size: 40px;
-    font-family: "Bebas Neue";
-  }
-  .Infobutton button{
-    font-size: 40px;
-  }
-  .btn {
-    border: none;
-    color: black;
-    background-color: white;
-    cursor: pointer;
-    font-family: "Bebas Neue";
-  }
-  .Upgradetext {
-    display: row;
-    background-color: #F9DB6D;
-    font-size: 14px;
-    border-left: 0.5vh solid black;
-  }
-  .Rebirth {
-    background-color: #273E47;
-    height: 16vh;
-    width: 16vh;
-    border: 0.5vh solid black;
-    border-radius: 50%;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    cursor: pointer;
-  }
+/*Back/Return Button*/
+.navbarC {
+  display: flex;
+  background-color: #A23E48;
+  width: 100%;
+  border: 1px solid black;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.navbarC a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  flex: 1;
+  border: 0.25vh solid black;
+}
+.navbarC a:first-child, .navbarC a:last-child {
+  background-color: #273E47;
+}
+.navbarC a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Clicker bar */
+.clickerbar {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vh 0;
+  background-color: #F9DB6D;
+  border: 0.5vh solid black;
+  font-size: 3vh;
+  overflow: hidden;
+}
+.clickerbar p {
+  margin: 0;
+  padding: 1vh 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.clicker-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-button {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  background-color: #A23E48;
+  color: white;
+  font-size: 3vh;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s;
+}
+.circle-button:hover {
+  transform: scale(1.05);
+}
+.circle-button:active {
+  transform: scale(0.95);
+}
+/* Leaderboard button */
+.Leaderboard {
+  position: absolute;
+  bottom: 22vh;
+  right: 2vw;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 3vh;
+}
+/* Purchase bar */
+.purchasebar {
+  height: 20vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh;
+  background-color: white;
+  border: 0.5vh solid black;
+  overflow: hidden;
+}
+.Cost, .Upgrade, .Infobutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.btn {
+  border: none;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  font-family: "Bebas Neue";
+  font-size: 2.5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Upgradetext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: #F9DB6D;
+  border-left: 0.5vh solid black;
+  font-size: 2vh;
+}
+.Rebirth {
+  background-color: #273E47;
+  height: 8vh;
+  width: 8vh;
+  border: 0.5vh solid black;
+  border-radius: 50%;
+  margin: 1vh 0;
+  cursor: pointer;
+}
