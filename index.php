@@ -69,5 +69,12 @@
       scoreElement.innerText = score;
     });
 </script>
+<script>
+    // Toggle mobile menu
+    document.getElementById('burgerMenu').addEventListener('click', () => {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+    });
+</script>
 </body>
 </html>
