@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    //print $sql;
     // Execute the query and check if it was successful
         if ($conn->query($sql) === TRUE) {
-    echo "Sucess!";
+    echo "Form Sucessfully submitted";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
