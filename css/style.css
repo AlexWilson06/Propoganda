@@ -30,19 +30,19 @@ body {
 /* Navigation bar */
 .navbarC {
   display: flex;
-  background-color: #A23E48;
+  background-color: #a3555d;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid rgb(49, 49, 49);
   top: 0;
   left: 0;
   z-index: 1000;
 }
 .navbarC a {
-  color: black;
+  color: rgb(49, 49, 49);
   padding: 1px 10px;
   text-decoration: none;
   flex: 1;
-  border: 0.25vh solid black;
+  border: 0.25vh solid rgb(49, 49, 49);
   font-size: 7vh;
 }
 .navbarC a:first-child, .navbarC a:last-child {
@@ -73,8 +73,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 2vh 0;
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   font-size: 3vh;
   height: 92.5vh;
   top: 60px;
@@ -92,17 +92,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black 1vh;
+  border: rgb(49, 49, 49) 1vh;
 }
 /* Circle button */
 .circle-button {
   width: 30vh;
   height: 30vh;
   border-radius: 50%;
-  background-color: #A23E48;
+  background-color: #a3555d;
   color: white;
   font-size: 3vh;
-  border: black 1vh;
+  border: rgb(49, 49, 49) 1vh;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -121,8 +121,8 @@ body {
   bottom: 30vh;
   right: 2vw;
   background-color: white;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid rgb(49, 49, 49);
+  color: rgb(49, 49, 49);
   padding: 10px 20px;
   text-align: center;
   cursor: pointer;
@@ -140,7 +140,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   overflow: hidden;
   z-index: 1;
 }
@@ -152,7 +152,7 @@ body {
 }
 .btn {
   border: none;
-  color: black;
+  color: rgb(49, 49, 49);
   background-color: white;
   cursor: pointer;
   font-family: "Bebas Neue";
@@ -168,8 +168,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  background-color: #F9DB6D;
-  border-left: 0.5vh solid black;
+  background-color: #f8e18f;
+  border-left: 0.5vh solid rgb(49, 49, 49);
 }
 .Upgradetext p{
   font-size: 4.5vh;
@@ -179,7 +179,7 @@ body {
   background-color: #273E47;
   height: 17vh;
   width: 17vh;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   border-radius: 50%;
   cursor: pointer;
   margin-bottom: 0.5vh;
@@ -195,8 +195,8 @@ body {
 }
 /* contact page */
 .ContactsTitle{
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 6vh;
   font-size: 10vh;
 }
@@ -204,14 +204,14 @@ body {
   margin-left: 3%;
   margin-right: 3%;
   border-radius: 5px;
-  background-color: #F9DB6D;
+  background-color: #f8e18f;
   padding: 20px;
 }
 .col-25 {
   float: left;
   width: 25%;
   margin-top: 6px;
-  border: solid black 0.5vh;
+  border: solid rgb(49, 49, 49) 0.5vh;
   background-color: white;
 }
 .col-75 {
@@ -221,70 +221,70 @@ body {
 }  
 /* Settings Page */
 .SettingsTitle{
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 6vh;
   font-size: 10vh;
 }
 .SettingsBody {
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin-left: 6vh;
   margin-right: 6vh;
   font-size: 4vh;
 }
 .SettingsSave{
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 6vh;
   font-size: 8vh;
   width: 20vh;
 } 
 .Brightness{
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 6vh;
   font-size: 8vh;
   width: 50vh;
 }
 .Wipe{
-  background-color: red;
-  border: 0.5vh solid black;
+  background-color: rgb(253, 37, 37);
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 6vh;
   font-size: 8vh;
   width: 20vh;
 }
 /* Statistics */
 .StatisticsTitle{
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 6vh;
   font-size: 10vh;
 }
 .StatisticsBody {
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin-left: 6vh;
   margin-right: 6vh;
   font-size: 4vh;
 }
 .Statistics{
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 3vh;
   font-size: 6vh;
   width: 94%;
 } 
 .Statistics2{
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 3vh;
   font-size: 8vh;
   width: 94%;
 }
 .Statistics3{
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 3vh;
   font-size: 5vh;
   width: 94%;
@@ -324,20 +324,20 @@ body {
 /* Navigation bar */
 .navbarC {
   display: flex;
-  background-color: #A23E48;
+  background-color: #a3555d;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid rgb(49, 49, 49);
   top: 0;
   left: 0;
   z-index: 1000;
   height: 6vh;
 }
 .navbarC a {
-  color: black;
+  color: rgb(49, 49, 49);
   padding: 0.5vh;
   text-decoration: none;
   flex: 1;
-  border: 0.25vh solid black;
+  border: 0.25vh solid rgb(49, 49, 49);
   font-size: 2.8vh;
 }
 .navbarC a:first-child, .navbarC a:last-child {
@@ -370,8 +370,8 @@ body {
   padding: 1vh 0;
   margin-top: -4vh;
   margin-left: 10%;
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   font-size: 4vh;
   height: 35vh;
   position: absolute;
@@ -390,17 +390,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black 1vh;
+  border: rgb(49, 49, 49) 1vh;
 }
 /* Circle button */
 .circle-button {
   width: 15vh;
   height: 15vh;
   border-radius: 50%;
-  background-color: #A23E48;
+  background-color: #a3555d;
   color: white;
   font-size: 3vh;
-  border: black 1vh;
+  border:  rgb(49, 49, 49) 1vh;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -419,8 +419,8 @@ body {
   bottom: 10vh;
   right: 2vw;
   background-color: white;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid  rgb(49, 49, 49);
+  color:  rgb(49, 49, 49);
   padding: 5px 10px;
   text-align: center;
   cursor: pointer;
@@ -438,7 +438,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid  rgb(49, 49, 49);
   overflow: hidden;
   z-index: 1;
 }
@@ -450,7 +450,7 @@ body {
 }
 .btn {
   border: none;
-  color: black;
+  color:  rgb(49, 49, 49);
   background-color: white;
   cursor: pointer;
   font-family: "Bebas Neue";
@@ -466,8 +466,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  background-color: #F9DB6D;
-  border-left: 0.5vh solid black;
+  background-color: #f8e18f;
+  border-left: 0.5vh solid  rgb(49, 49, 49);
 }
 .Upgradetext p {
   font-size: 3vh;
@@ -477,7 +477,7 @@ body {
   background-color: #273E47;
   height: 17vh;
   width: 17vh;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   border-radius: 50%;
   cursor: pointer;
   margin-bottom: 0.5vh;
@@ -493,8 +493,8 @@ body {
 }
 /* Contact page */
 .ContactsTitle {
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 2vh;
   font-size: 6vh;
 }
@@ -502,14 +502,14 @@ body {
   margin-left: 3%;
   margin-right: 3%;
   border-radius: 5px;
-  background-color: #F9DB6D;
+  background-color: #f8e18f;
   padding: 10px;
 }
 .col-25 {
   float: left;
   width: 100%;
   margin-top: 6px;
-  border: solid black 0.5vh;
+  border: solid rgb(49, 49, 49) 0.5vh;
   background-color: white;
 }
 .col-75 {
@@ -547,70 +547,70 @@ body {
 }
 /* Settings Page */
 .SettingsTitle {
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 2vh;
   font-size: 6vh;
 }
 .SettingsBody {
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin-left: 2vh;
   margin-right: 2vh;
   font-size: 2vh;
 }
 .SettingsSave {
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 2vh;
   font-size: 5vh;
   width: 15vh;
 }
 .Brightness {
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 2vh;
   font-size: 5vh;
   width: 30vh;
 }
 .Wipe {
-  background-color: red;
-  border: 0.5vh solid black;
+  background-color: rgb(253, 62, 62);
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 2vh;
   font-size: 5vh;
   width: 15vh;
 }
 /* Statistics */
 .StatisticsTitle {
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 2vh;
   font-size: 6vh;
 }
 .StatisticsBody {
-  background-color: #F9DB6D;
-  border: 0.5vh solid black;
+  background-color: #f8e18f;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin-left: 2vh;
   margin-right: 2vh;
   font-size: 2vh;
 }
 .Statistics {
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 1vh;
   font-size: 4vh;
   width: 94%;
 }
 .Statistics2 {
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 1vh;
   font-size: 4vh;
   width: 94%;
 }
 .Statistics3 {
   background-color: white;
-  border: 0.5vh solid black;
+  border: 0.5vh solid rgb(49, 49, 49);
   margin: 1vh;
   font-size: 4vh;
   width: 94%;
