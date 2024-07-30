@@ -13,5 +13,31 @@
     <?php
     include ('ReturnButton.php')
     ?>
+     <div class="gallery">
+        <div class="gallery-item">
+            <img src="media/IMG_6605.JPG" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="media/IMG_6610.JPG" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="media/IMG_6611.JPG" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="media/IMG_6612.JPG" alt="Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="media/IMG_6617.JPG" alt="Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="media/IMG_6622.JPG" alt="Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src="media/IMG_6625.JPG" alt="Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src="media/IMG_6627.JPG" alt="Image 8">
+        </div>
+    </div>
 </body>
 </html>

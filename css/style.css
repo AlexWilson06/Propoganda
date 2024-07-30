@@ -205,16 +205,16 @@ body {
   margin-right: 3%;
   border-radius: 5px;
   background-color: #f8e18f;
-  padding: 20px;
+  padding: 10px;
 }
 .col-25 {
   float: left;
-  width: 25%;
-  margin-top: 6px;
-  border: solid rgb(49, 49, 49) 0.5vh;
-  background-color: white;
+  width: 75%;
+  margin-top: -1vh;
+  margin-bottom: -1vh;
 }
 .col-75 {
+  width: 75%;
   float: left;
   display: table;
   clear: both;
@@ -288,6 +288,50 @@ body {
   margin: 3vh;
   font-size: 5vh;
   width: 94%;
+}
+/* Sign in page */
+.SignInTitle {
+  font-size: 12vh;
+  margin-top: -6vh;
+  margin-bottom: -6vh;
+}
+.SignIn {
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 5px;
+  background-color: #0274a9;
+  padding: 10px;
+}
+.bar {
+  float: left;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.SignLogRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Leaderboard/Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  flex: 23%;
+  margin: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 }
   /* Responsive Layout/Media Queries */
@@ -416,7 +460,7 @@ body {
 /* Leaderboard button */
 .Leaderboard {
   position: absolute;
-  bottom: 10vh;
+  bottom: 26vh;
   right: 2vw;
   background-color: white;
   border: 1px solid  rgb(49, 49, 49);
