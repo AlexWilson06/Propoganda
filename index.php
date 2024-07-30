@@ -14,7 +14,7 @@
     <div class="MainCollumn">
         <div class="Section2">
             <div class="clickerbar">
-                <p>Name:<br>(placeholder)<br>Money:<br><span id="score">0</span></p>
+                <p>Money:<br><span id="score">0</span></p>
                 <div class="clicker-container">
                     <button id="clicker" class="circle-button"></button>
                 </div>
