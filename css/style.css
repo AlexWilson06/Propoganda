@@ -11,7 +11,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 /* Layout */
 .MainCollumn {
@@ -19,6 +18,7 @@ body {
   flex-direction: column;
   flex: 1;
   position: relative;
+  overflow: hidden;
 }
 .Section2 {
   flex: 1;
@@ -79,6 +79,7 @@ body {
   height: 92.5vh;
   top: 60px;
   left: 0;
+  overflow: hidden;
 }
 .clickerbar p {
   margin: 0;

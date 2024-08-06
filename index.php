@@ -22,7 +22,7 @@
             <img id="countryImage" src="media/BaseCountry.png" alt="Country Image" class="rotated-image">
         </div>
         <div class="Leaderboard">
-            <a href="Leaderboard.php">Leaderboard</a>
+            <a href="Leaderboard.php?id=1">Leaderboard</a>
         </div>
         <div class="purchasebar">
             <div class="Cost">

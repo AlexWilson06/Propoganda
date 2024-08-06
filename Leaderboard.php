@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<title>Leaderboard</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-</head>
 <?php
 // Include the database configuration file
 include 'setup.php';
@@ -41,22 +30,35 @@ if (isset($_GET['id'])) {
   exit;
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  </head>
+</html>
+<html>
+<head>
+</head>
 <body>
+  <h1>Leaderboards Page</h1>
   <div>
     <div>
       <h2><?php echo $title1; ?></h2>
       <p><?php echo $text1; ?></p>
-      <img src="<?php echo $image1; ?>" alt="">
+      <img src="<?php echo $image1; ?>" alt="Image Failed to load">
     </div>
     <div>
       <h2><?php echo $title2; ?></h2>
       <p><?php echo $text2; ?></p>
-      <img src="<?php echo $image2; ?>" alt="">
+      <img src="<?php echo $image2; ?>" alt="Image Failed to load">
     </div>
     <div>
       <h2><?php echo $title3; ?></h2>
       <p><?php echo $text3; ?></p>
-      <img src="<?php echo $image3; ?>" alt="">
+      <img src="<?php echo $image3; ?>" alt="Image Failed to load">
     </div>
   </div>
 </body>
