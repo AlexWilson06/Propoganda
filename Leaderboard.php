@@ -9,35 +9,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/style.css">
 </head>
+<?php
+// Include the database configuration file
+include 'setup.php';
+// Check if the ID is set in the URL
+if (isset($_GET['id'])) {
+  $id = $_GET['id'];
+  // Fetch the page details from the database
+  $sql = "SELECT * FROM pages WHERE id=$id";
+  $result = $conn->query($sql);
+  // Check if the page exists
+  if ($result->num_rows > 0) {
+    $page = $result->fetch_assoc();
+    
+    // Assign the fields to variables
+    $title1 = $page['title1'];
+    $text1 = $page['text1'];
+    $image1 = $page['image1'];
+    $title2 = $page['title2'];
+    $text2 = $page['text2'];
+    $image2 = $page['image2'];
+    $title3 = $page['title3'];
+    $text3 = $page['text3'];
+    $image3 = $page['image3'];
+  } else {
+    echo "Page not found.";
+    exit;
+  }
+} else {
+  echo "No page ID provided.";
+  exit;
+}
+?>
 <body>
-    <?php
-    include ('ReturnButton.php')
-    ?>
-     <div class="gallery">
-        <div class="gallery-item">
-            <img src="media/IMG_6605.JPG" alt="Image 1">
-        </div>
-        <div class="gallery-item">
-            <img src="media/IMG_6610.JPG" alt="Image 2">
-        </div>
-        <div class="gallery-item">
-            <img src="media/IMG_6611.JPG" alt="Image 3">
-        </div>
-        <div class="gallery-item">
-            <img src="media/IMG_6612.JPG" alt="Image 4">
-        </div>
-        <div class="gallery-item">
-            <img src="media/IMG_6617.JPG" alt="Image 5">
-        </div>
-        <div class="gallery-item">
-            <img src="media/IMG_6622.JPG" alt="Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="media/IMG_6625.JPG" alt="Image 7">
-        </div>
-        <div class="gallery-item">
-            <img src="media/IMG_6627.JPG" alt="Image 8">
-        </div>
+  <div>
+    <div>
+      <h2><?php echo $title1; ?></h2>
+      <p><?php echo $text1; ?></p>
+      <img src="<?php echo $image1; ?>" alt="">
     </div>
+    <div>
+      <h2><?php echo $title2; ?></h2>
+      <p><?php echo $text2; ?></p>
+      <img src="<?php echo $image2; ?>" alt="">
+    </div>
+    <div>
+      <h2><?php echo $title3; ?></h2>
+      <p><?php echo $text3; ?></p>
+      <img src="<?php echo $image3; ?>" alt="">
+    </div>
+  </div>
 </body>
 </html>
