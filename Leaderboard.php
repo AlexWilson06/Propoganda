@@ -1,4 +1,18 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard Page</title>
+  <link rel="stylesheet" href="css/style.css">
+  </head>
+</html>
+<html>
+<head>
+</head>
+<body>
+<?php include ('NavBar.php'); ?>
+  <?php
 // Include the database configuration file
 include 'setup.php';
 // Check if the ID is set in the URL
@@ -30,19 +44,6 @@ if (isset($_GET['id'])) {
   exit;
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leaderboard Page</title>
-  <link rel="stylesheet" href="css/style.css">
-  </head>
-</html>
-<html>
-<head>
-</head>
-<body>
   <h1>Leaderboards Page</h1>
   <div>
     <div>
