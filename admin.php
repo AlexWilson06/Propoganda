@@ -6,7 +6,35 @@ include 'setup.php';
 $sql = "SELECT * FROM pages";
 $result = $conn->query($sql);
 ?>
-
+<?php
+session_start();
+// Redirect to login page if user is not logged in
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.html');
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="css/loginstyle.css" rel="stylesheet" type="text/css">
+</head>
+<body class="loggedin">
+    <nav class="navtop">
+        <div>
+            <h1>Admin Page</h1>
+            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h2>Admin Page</h2>
+        <p>Welcome back, <?= htmlspecialchars($_SESSION['name'], ENT_QUOTES) ?>!</p>
+    </div>
+</body>
+</html>
 <!DOCTYPE html>
 <html>
 <head>
