@@ -14,7 +14,8 @@
     <div class="MainCollumn">
         <div class="Section2">
             <div class="clickerbar">
-                <p>Money:<br><span id="score">0.0</span></p>
+                <p>Rebirths:<br><span id="rebirths">nil</span></p>
+                <p>Money:<br><span id="score">0</span></p>
                 <div class="clicker-container">
                     <button id="clicker" class="circle-button"></button>
                 </div>
@@ -48,128 +49,137 @@
     </div>
     <script>
         let score = 0;
-        let moneyPerClick = 1;
-        let passiveIncome = 0; // Track passive income
-        const scoreElement = document.getElementById('score');
-        const countryImage = document.getElementById('countryImage');
-        const clickerButton = document.getElementById('clicker');
+let moneyPerClick = 1;
+let passiveIncome = 0; // Track passive income
+let rebirths = 0;
+const rebirthsElement = document.getElementById('rebirths'); // Correctly references the rebirths element
+const scoreElement = document.getElementById('score');
+const countryImage = document.getElementById('countryImage');
+const clickerButton = document.getElementById('clicker');
+const rebirthButton = document.getElementById('rebirthButton');
 
-        // Function to update the country image based on the score
-        function updateCountryImage() {
-            if (moneyPerClick >= 100) {
-                countryImage.src = 'media/CountryStage5.png';
-            } else if (moneyPerClick >= 50) {
-                countryImage.src = 'media/CountryStage4.png';
-            } else if (moneyPerClick >= 25) {
-                countryImage.src = 'media/CountryStage3.png';
-            } else if (moneyPerClick >= 5) {
-                countryImage.src = 'media/CountryStage2.png';
-            } else if (moneyPerClick >= 1.5) {
-                countryImage.src = 'media/CountryStage1.png';
-            } else {
-                countryImage.src = 'media/BaseCountry.png';
-            }
-        }
+// Function to update the country image based on the score
+function updateCountryImage() {
+    if (moneyPerClick >= 100) {
+        countryImage.src = 'media/CountryStage5.png';
+    } else if (moneyPerClick >= 50) {
+        countryImage.src = 'media/CountryStage4.png';
+    } else if (moneyPerClick >= 25) {
+        countryImage.src = 'media/CountryStage3.png';
+    } else if (moneyPerClick >= 5) {
+        countryImage.src = 'media/CountryStage2.png';
+    } else if (moneyPerClick >= 1.5) {
+        countryImage.src = 'media/CountryStage1.png';
+    } else {
+        countryImage.src = 'media/BaseCountry.png';
+    }
+}
 
-        // Function to handle the rebirth action
-        function handleRebirth() {
-            if (score >= 10000) {
-                score = 0; // Reset score
-                moneyPerClick = 1; // Reset money per click
-                passiveIncome = 0; // Reset passive income
-                updateScore(score); // Update the score display
-                console.log("Country upgraded and score reset to 0");
-                updateCountryImage(); // Update the image after resetting the score
-            } else {
-                console.log("Not enough money to upgrade the country");
-            }
-        }
+// Function to handle the rebirth action
+function handleRebirth() {
+    if (score >= 10000) {
+        rebirths += 1;
+        score = 0; // Reset score
+        moneyPerClick = 1; // Reset money per click
+        passiveIncome = 0; // Reset passive income
+        updateScore(score); // Update the score display
+        updaterebirths(rebirths); // Update the rebirths display
+        console.log("Country upgraded and score reset to 0");
+        updateCountryImage(); // Update the image after resetting the score
+    } else {
+        console.log("Not enough money to upgrade the country");
+    }
+}
 
-        // Function to update the score and country image
-        function updateScore(newScore) {
-            score = newScore;
-            scoreElement.innerText = score.toFixed(0); // Round score to 1 decimal place
-            updateCountryImage(); // Update the image whenever the score changes
-        }
+function updaterebirths(newrebirths) {
+    rebirths = newrebirths;
+    rebirthsElement.innerText = rebirths.toFixed(0); // Update rebirths display
+}
 
-        // Function to handle upgrade purchase for upgrade1
-        function handleUpgrade1() {
-            if (score >= 15) {
-                moneyPerClick += 0.1;
-                passiveIncome += 0.5; // Increase passive income by 0.1 per second
-                score -= 15; // Deduct 50 money
-                updateScore(score); // Update the score display
-                console.log("Upgrade purchased: Passive income increased by 0.1 per second");
-            } else {
-                console.log("Not enough money to purchase upgrade");
-            }
-        }
+// Function to update the score
+function updateScore(newScore) {
+    score = newScore;
+    scoreElement.innerText = score.toFixed(0); // Round score to 1 decimal place
+    updateCountryImage(); // Update the image whenever the score changes
+}
 
-        // Function to handle upgrade purchase for upgrade2
-        function handleUpgrade2() {
-            if (score >= 100) {
-                moneyPerClick += 1;
-                passiveIncome += 5; // Increase the money per click
-                score -= 100; // Deduct 100 money
-                updateScore(score); // Update the score display
-                console.log("Upgrade purchased: Money per click increased");
-            } else {
-                console.log("Not enough money to purchase upgrade");
-            }
-        }
+// Function to handle upgrade purchase for upgrade1
+function handleUpgrade1() {
+    if (score >= 15) {
+        moneyPerClick += 0.1;
+        passiveIncome += 0.5; // Increase passive income by 0.1 per second
+        score -= 15; // Deduct 50 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Passive income increased by 0.1 per second");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
 
-        // Function to handle upgrade purchase for upgrade3
-        function handleUpgrade3() {
-            if (score >= 1100) {
-                moneyPerClick += 8;
-                passiveIncome += 40;  // Increase the money per click
-                score -= 1100; // Deduct 500 money
-                updateScore(score); // Update the score display
-                console.log("Upgrade purchased: Money per click increased significantly");
-            } else {
-                console.log("Not enough money to purchase upgrade");
-            }
-        }
+// Function to handle upgrade purchase for upgrade2
+function handleUpgrade2() {
+    if (score >= 100) {
+        moneyPerClick += 1;
+        passiveIncome += 5; // Increase the money per click
+        score -= 100; // Deduct 100 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
 
-        // Function to increase money passively over time
-        function increaseMoneyPassively() {
-            score += passiveIncome; // Add passive income to the score
-            updateScore(score);
-        }
+// Function to handle upgrade purchase for upgrade3
+function handleUpgrade3() {
+    if (score >= 1100) {
+        moneyPerClick += 8;
+        passiveIncome += 40;  // Increase the money per click
+        score -= 1100; // Deduct 500 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
 
-        // Add event listener for the clicker button
-        clickerButton.addEventListener('click', () => {
-            score += moneyPerClick; // Increase score by the current money per click
-            updateScore(score); // Update the score display
-            fetch('update_score.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ score: score })
-            });
-            updateCountryImage(); // Update the image when the score changes
-        });
+// Function to increase money passively over time
+function increaseMoneyPassively() {
+    score += passiveIncome; // Add passive income to the score
+    updateScore(score);
+}
 
-        // Attach event listener to the rebirth button
-        document.getElementById("rebirthButton").addEventListener("click", handleRebirth);
+// Add event listener for the clicker button
+clickerButton.addEventListener('click', () => {
+    score += moneyPerClick; // Increase score by the current money per click
+    updateScore(score); // Update the score display
+    fetch('update_score.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ score: score })
+    });
+    updateCountryImage(); // Update the image when the score changes
+});
 
-        // Attach event listeners to upgrade buttons
-        document.getElementById("upgrade1").addEventListener("click", handleUpgrade1);
-        document.getElementById("upgrade2").addEventListener("click", handleUpgrade2);
-        document.getElementById("upgrade3").addEventListener("click", handleUpgrade3);
+// Attach event listener to the rebirth button
+rebirthButton.addEventListener('click', handleRebirth);
 
-        // Fetch the current score when the page loads
-        fetch('get_score.php')
-            .then(response => response.json())
-            .then(data => {
-                score = data.score;
-                updateScore(score); // Use updateScore to apply rounding
-            });
+// Attach event listeners to upgrade buttons
+document.getElementById("upgrade1").addEventListener("click", handleUpgrade1);
+document.getElementById("upgrade2").addEventListener("click", handleUpgrade2);
+document.getElementById("upgrade3").addEventListener("click", handleUpgrade3);
 
-        // Set interval for passive income
-        setInterval(increaseMoneyPassively, 1000); // Increase money every second
+// Fetch the current score when the page loads
+fetch('get_score.php')
+    .then(response => response.json())
+    .then(data => {
+        score = data.score;
+        updateScore(score); // Use updateScore to apply rounding
+    });
 
+// Set interval for passive income
+setInterval(increaseMoneyPassively, 1000); // Increase money every second
     </script>
 </body>
 </html>
