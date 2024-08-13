@@ -299,10 +299,10 @@ background-color: #2868c7;
 }
 /* Purchase bar */
 .purchasebar {
-  height: 25vh;
+  height: 27vh;
   width: 80vw;
   position: absolute;
-  top: 65vh;
+  top: 63vh;
   left: 20vw;
   display: flex;
   justify-content: space-between;
@@ -319,7 +319,7 @@ background-color: #2868c7;
   height: 100%;
 }
 .btn {
-  border: none;
+  border: solid black 0.5vh;
   color: rgb(49, 49, 49);
   background-color: white;
   cursor: pointer;
@@ -327,7 +327,7 @@ background-color: #2868c7;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 5vh;
+  font-size: 7.6vh;
 }
 .Upgradetext {
   width: 30vh;
