@@ -27,32 +27,62 @@
         </div>
         <div class="purchasebar">
             <div class="Cost">
-                <button class="btn">cost: 15</button>
-                <button class="btn">cost: 100</button>
-                <button class="btn">cost: 1,100</button>
+                <button class="btn">15</button>
+                <button class="btn">100</button>
+                <button class="btn">1,100</button>
+                <button class="btn">12,000</button>
+                <button class="btn">130,000</button>
             </div>
             <div class="Upgrade">
-                <button id="upgrade1" class="btn">patriotism levels</button>
-                <button id="upgrade2" class="btn">Increase worker</button>
-                <button id="upgrade3" class="btn">corruption levels</button>
+                <button id="upgrade1" class="btnup">patriotism levels</button>
+                <button id="upgrade2" class="btnup">Increase workers</button>
+                <button id="upgrade3" class="btnup">corruption levels</button>
+                <button id="upgrade4" class="btnup">Supress Media</button>
+                <button id="upgrade5" class="btnup">Reduce Rights</button>
             </div>
             <div class="Infobutton">
-                <button class="btn">+0.1/click +0.5/sec</button>
-                <button class="btn">+1/click +5/sec</button>
-                <button class="btn">+8/click +40/sec</button>
+                <button class="btn">+0.1/PPC +0.5/sec</button>
+                <button class="btn">+1/PPC +4/sec</button>
+                <button class="btn">+8/PPC +35/sec</button>
+                <button class="btn">+47/PPC +200/sec</button>
+                <button class="btn">+260/PPC +1000/sec</button>
+            </div>
+            
+            <div class="Cost">
+                <button class="btn">1.4M</button>
+                <button class="btn">20M</button>
+                <button class="btn">330M</button>
+                <button class="btn">5.1B</button>
+                <button class="btn">75B</button>
+                
+            </div>
+            <div class="Upgrade">
+                <button id="upgrade6" class="btnup">Child Labour</button>
+                <button id="upgrade7" class="btnup">Surveilance</button>
+                <button id="upgrade8" class="btnup">Monopolise Industry</button>
+                <button id="upgrade9" class="btnup">Re-Education Camps</button>
+                <button id="upgrade10" class="btnup">Complete Domination</button>
+            </div>
+            <div class="Infobutton">
+                <button class="btn">+1,400/PPC +7,500/sec</button>
+                <button class="btn">+7,800/PPC +35,000/sec</button>
+                <button class="btn">+44,000/PPC 200,000/sec</button>
+                <button class="btn">+260,000/PPC +1.25M/sec</button>
+                <button class="btn">+1.6M/PPC +8M/sec</button>
             </div>
             <div class="Upgradetext">
-                <p>Upgrade Country</p>
-                <button id="rebirthButton" class="Rebirth">Cost: 10,000</button>
+                <p>Improve Leadership</p>
+                <button id="rebirthButton" class="Rebirth">Cost: 1,000,000</button>
             </div>
         </div>
     </div>
     <script>
-        let score = 0;
+let score = 0;
 let moneyPerClick = 1;
 let passiveIncome = 0; // Track passive income
 let rebirths = 0;
-const rebirthsElement = document.getElementById('rebirths'); // Correctly references the rebirths element
+let rebirthCost = 1000000; // Initial rebirth cost
+const rebirthsElement = document.getElementById('rebirths');
 const scoreElement = document.getElementById('score');
 const countryImage = document.getElementById('countryImage');
 const clickerButton = document.getElementById('clicker');
@@ -60,15 +90,25 @@ const rebirthButton = document.getElementById('rebirthButton');
 
 // Function to update the country image based on the score
 function updateCountryImage() {
-    if (moneyPerClick >= 100) {
+    if (passiveIncome >= 100000000) {
+        countryImage.src = 'media/CountryStage10.png';
+    } else if (passiveIncome >= 10000000) {
+        countryImage.src = 'media/CountryStage9.png';
+    } else if (passiveIncome >= 1000000) {
+        countryImage.src = 'media/CountryStage8.png';
+    } else if (passiveIncome >= 100000) {
+        countryImage.src = 'media/CountryStage7.png';
+    } else if (passiveIncome >= 10000) {
+        countryImage.src = 'media/CountryStage6.png';
+    } else if (passiveIncome >= 1000) {
         countryImage.src = 'media/CountryStage5.png';
-    } else if (moneyPerClick >= 50) {
+    } else if (passiveIncome >= 100) {
         countryImage.src = 'media/CountryStage4.png';
-    } else if (moneyPerClick >= 25) {
+    } else if (passiveIncome >= 50) {
         countryImage.src = 'media/CountryStage3.png';
-    } else if (moneyPerClick >= 5) {
+    } else if (passiveIncome >= 25) {
         countryImage.src = 'media/CountryStage2.png';
-    } else if (moneyPerClick >= 1.5) {
+    } else if (passiveIncome >= 5) {
         countryImage.src = 'media/CountryStage1.png';
     } else {
         countryImage.src = 'media/BaseCountry.png';
@@ -77,13 +117,15 @@ function updateCountryImage() {
 
 // Function to handle the rebirth action
 function handleRebirth() {
-    if (score >= 10000) {
+    if (score >= rebirthCost) {
         rebirths += 1;
         score = 0; // Reset score
-        moneyPerClick = 1; // Reset money per click
-        passiveIncome = 0; // Reset passive income
+        moneyPerClick = 1 * Math.pow(5, rebirths); // Reset money per click
+        passiveIncome = 0 * Math.pow(5, rebirths); // Reset passive income
+        rebirthCost *= 10; // Double the rebirth cost
         updateScore(score); // Update the score display
         updaterebirths(rebirths); // Update the rebirths display
+        rebirthButton.innerText = `Cost: ${rebirthCost.toLocaleString()}`; // Update the rebirth button text
         console.log("Country upgraded and score reset to 0");
         updateCountryImage(); // Update the image after resetting the score
     } else {
@@ -106,11 +148,11 @@ function updateScore(newScore) {
 // Function to handle upgrade purchase for upgrade1
 function handleUpgrade1() {
     if (score >= 15) {
-        moneyPerClick += 0.1;
-        passiveIncome += 0.5; // Increase passive income by 0.1 per second
+        moneyPerClick += 0.1 * Math.pow(5, rebirths);
+        passiveIncome += 0.5 * Math.pow(5, rebirths); // Increase passive income
         score -= 15; // Deduct 50 money
         updateScore(score); // Update the score display
-        console.log("Upgrade purchased: Passive income increased by 0.1 per second");
+        console.log("Upgrade purchased: Passive income increased");
     } else {
         console.log("Not enough money to purchase upgrade");
     }
@@ -119,8 +161,8 @@ function handleUpgrade1() {
 // Function to handle upgrade purchase for upgrade2
 function handleUpgrade2() {
     if (score >= 100) {
-        moneyPerClick += 1;
-        passiveIncome += 5; // Increase the money per click
+        moneyPerClick += 1 * Math.pow(5, rebirths);
+        passiveIncome += 4 * Math.pow(5, rebirths); // Increase the money per click
         score -= 100; // Deduct 100 money
         updateScore(score); // Update the score display
         console.log("Upgrade purchased: Money per click increased");
@@ -132,10 +174,94 @@ function handleUpgrade2() {
 // Function to handle upgrade purchase for upgrade3
 function handleUpgrade3() {
     if (score >= 1100) {
-        moneyPerClick += 8;
-        passiveIncome += 40;  // Increase the money per click
+        moneyPerClick += 8 * Math.pow(5, rebirths);
+        passiveIncome += 35 * Math.pow(5, rebirths);  // Increase the money per click
         score -= 1100; // Deduct 500 money
         updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
+
+function handleUpgrade4() {
+    if (score >= 12000) {
+        moneyPerClick += 25 * Math.pow(5, rebirths);
+        passiveIncome += 100 * Math.pow(5, rebirths);  // Increase the money per click
+        score -= 12000; // Deduct 500 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
+
+function handleUpgrade5() {
+    if (score >= 130000) {
+        moneyPerClick += 100 * Math.pow(5, rebirths);
+        passiveIncome += 300 * Math.pow(5, rebirths);  // Increase the money per click
+        score -= 130000; // Deduct 500 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
+
+function handleUpgrade6() {
+    if (score >= 1400000) {
+        moneyPerClick += 1000 * Math.pow(5, rebirths);
+        passiveIncome += 5000 * Math.pow(5, rebirths);  // Increase the money per click
+        score -= 1400000; // Deduct 500 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
+
+function handleUpgrade7() {
+    if (score >= 20000000) {
+        moneyPerClick += 10000 * Math.pow(5, rebirths);
+        passiveIncome += 60000 * Math.pow(5, rebirths);  // Increase the money per click
+        score -= 20000000; // Deduct 500 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
+
+function handleUpgrade8() {
+    if (score >= 330000000) {
+        moneyPerClick += 150000 * Math.pow(5, rebirths);
+        passiveIncome += 1000000 * Math.pow(5, rebirths);  // Increase the money per click
+        score -= 330000000; // Deduct 500 money
+        updateScore(score); // Update the score display
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
+
+function handleUpgrade9() {
+    if (score >= 5100000000) {
+        moneyPerClick += 1000000 * Math.pow(5, rebirths);
+        passiveIncome += 7500000 * Math.pow(5, rebirths);
+        score -= 5100000000;
+        updateScore(score);
+        console.log("Upgrade purchased: Money per click increased significantly");
+    } else {
+        console.log("Not enough money to purchase upgrade");
+    }
+}
+
+function handleUpgrade10() {
+    if (score >= 75000000000) {
+        moneyPerClick += 1000000000 * Math.pow(5, rebirths);
+        passiveIncome += 10000000000 * Math.pow(5, rebirths);
+        score -= 75000000000;
+        updateScore(score);
         console.log("Upgrade purchased: Money per click increased significantly");
     } else {
         console.log("Not enough money to purchase upgrade");
@@ -150,36 +276,29 @@ function increaseMoneyPassively() {
 
 // Add event listener for the clicker button
 clickerButton.addEventListener('click', () => {
-    score += moneyPerClick; // Increase score by the current money per click
-    updateScore(score); // Update the score display
-    fetch('update_score.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ score: score })
-    });
-    updateCountryImage(); // Update the image when the score changes
+    score += moneyPerClick;
+    clickcount += 1
+    updateScore(score);
+    updateclickcount(clickcount);
 });
 
-// Attach event listener to the rebirth button
+// Add event listener for the rebirth button
 rebirthButton.addEventListener('click', handleRebirth);
+
+// Call the increaseMoneyPassively function every second (1000 milliseconds)
+setInterval(increaseMoneyPassively, 1000);
 
 // Attach event listeners to upgrade buttons
 document.getElementById("upgrade1").addEventListener("click", handleUpgrade1);
 document.getElementById("upgrade2").addEventListener("click", handleUpgrade2);
 document.getElementById("upgrade3").addEventListener("click", handleUpgrade3);
-
-// Fetch the current score when the page loads
-fetch('get_score.php')
-    .then(response => response.json())
-    .then(data => {
-        score = data.score;
-        updateScore(score); // Use updateScore to apply rounding
-    });
-
-// Set interval for passive income
-setInterval(increaseMoneyPassively, 1000); // Increase money every second
+document.getElementById("upgrade4").addEventListener("click", handleUpgrade4);
+document.getElementById("upgrade5").addEventListener("click", handleUpgrade5);
+document.getElementById("upgrade6").addEventListener("click", handleUpgrade6);
+document.getElementById("upgrade7").addEventListener("click", handleUpgrade7);
+document.getElementById("upgrade8").addEventListener("click", handleUpgrade8);
+document.getElementById("upgrade9").addEventListener("click", handleUpgrade9);
+document.getElementById("upgrade10").addEventListener("click", handleUpgrade10);
     </script>
 </body>
 </html>
