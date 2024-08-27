@@ -3,6 +3,33 @@
   box-sizing: border-box;
   text-align: center;
 }
+#container {
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+  display: block; 
+  padding: 10px;
+  box-sizing: border-box;
+}
+#purchasebar {
+  width: 100%; /* Full width */
+  height: 200px; /* Set a specific height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding: 10px; /* Optional padding */
+  box-sizing: border-box; /* Ensure padding is included in the overall width/height */
+}
+#purchasebar > .Cost, .Upgrade, .Infobutton {
+  width: 100%; /* Full width within the purchasebar */
+  margin-bottom: 10px; /* Space between divs */
+  padding: 10px; /* Optional padding */
+  height: auto; /* Adjust height based on content */
+  background-color: #f0f0f0; /* Optional background color */
+}
+.Cost, .Upgrade, .Infobutton {
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
 body {
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   margin: 0;
@@ -302,23 +329,22 @@ background-color: #2868c7;
 /* Purchase bar */
 .purchasebar {
   height: 31vh;
-  width: 83vw;
+  width: 66.9vw;
   position: absolute;
   top: 59vh;
   left: 17vw;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: white;
   border: 0.5vh solid rgb(49, 49, 49);
-  overflow: hidden;
   z-index: 1;
+  overflow-y: auto;
 }
 .Cost, .Upgrade, .Infobutton {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: auto;
+  flex: 1;
 }
 .btn {
   border: solid black 0.5vh;
@@ -329,7 +355,7 @@ background-color: #2868c7;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 3.8vh;
+  font-size: 7vh;
 }
 .btnup {
   border: solid black 0.5vh;
@@ -340,7 +366,7 @@ background-color: #2868c7;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 3.9vh;
+  font-size: 7vh;
 }
 .btnup:hover {
   transform: scale(1.01);
@@ -350,14 +376,17 @@ background-color: #2868c7;
   transform: scale(0.99);
 }
 .Upgradetext {
-  width: 30vh;
+  width: 35vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 59vh;
+  left: 83vw;
   height: 100%;
   background-color: #f8e18f;
-  border-left: 0.5vh solid rgb(49, 49, 49);
+  border: 1vh solid rgb(49, 49, 49);
 }
 .Upgradetext p{
   font-size: 4vh;
@@ -365,8 +394,10 @@ background-color: #2868c7;
 }
 .Rebirth {
   background-color: #273E47;
-  height: 24vh;
-  width: 24vh;
+  height: 23vh;
+  width: 23vh;
+  top: 6vh;
+  position: absolute;
   border: 0.5vh solid rgb(49, 49, 49);
   border-radius: 50%;
   cursor: pointer;

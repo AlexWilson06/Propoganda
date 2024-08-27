@@ -14,6 +14,7 @@
     <div class="MainCollumn">
         <div class="Section2">
             <div class="clickerbar">
+                <p>Communist republic of<br><span id="name">nobody</span></p>
                 <p>Rebirths:<br><span id="rebirths">nil</span></p>
                 <p>Money:<br><span id="score">0</span></p>
                 <div class="clicker-container">
@@ -32,6 +33,11 @@
                 <button class="btn">1,100</button>
                 <button class="btn">12,000</button>
                 <button class="btn">130,000</button>
+                <button class="btn">1.4M</button>
+                <button class="btn">20M</button>
+                <button class="btn">330M</button>
+                <button class="btn">5.1B</button>
+                <button class="btn">75B</button>
             </div>
             <div class="Upgrade">
                 <button id="upgrade1" class="btnup">patriotism levels</button>
@@ -39,24 +45,6 @@
                 <button id="upgrade3" class="btnup">corruption levels</button>
                 <button id="upgrade4" class="btnup">Supress Media</button>
                 <button id="upgrade5" class="btnup">Reduce Rights</button>
-            </div>
-            <div class="Infobutton">
-                <button class="btn">+0.1/PPC +0.5/sec</button>
-                <button class="btn">+1/PPC +4/sec</button>
-                <button class="btn">+8/PPC +35/sec</button>
-                <button class="btn">+47/PPC +200/sec</button>
-                <button class="btn">+260/PPC +1000/sec</button>
-            </div>
-            
-            <div class="Cost">
-                <button class="btn">1.4M</button>
-                <button class="btn">20M</button>
-                <button class="btn">330M</button>
-                <button class="btn">5.1B</button>
-                <button class="btn">75B</button>
-                
-            </div>
-            <div class="Upgrade">
                 <button id="upgrade6" class="btnup">Child Labour</button>
                 <button id="upgrade7" class="btnup">Surveilance</button>
                 <button id="upgrade8" class="btnup">Monopolise Industry</button>
@@ -64,11 +52,17 @@
                 <button id="upgrade10" class="btnup">Complete Domination</button>
             </div>
             <div class="Infobutton">
+                <button class="btn">+0.1/PPC +0.5/sec</button>
+                <button class="btn">+1/PPC +4/sec</button>
+                <button class="btn">+8/PPC +35/sec</button>
+                <button class="btn">+47/PPC +200/sec</button>
+                <button class="btn">+260/PPC +1000/sec</button>
                 <button class="btn">+1,400/PPC +7,500/sec</button>
                 <button class="btn">+7,800/PPC +35,000/sec</button>
                 <button class="btn">+44,000/PPC 200,000/sec</button>
                 <button class="btn">+260,000/PPC +1.25M/sec</button>
                 <button class="btn">+1.6M/PPC +8M/sec</button>
+</div>
             </div>
             <div class="Upgradetext">
                 <p>Improve Leadership</p>
@@ -81,7 +75,7 @@ let score = 0;
 let moneyPerClick = 1;
 let passiveIncome = 0; // Track passive income
 let rebirths = 0;
-let rebirthCost = 1000000; // Initial rebirth cost
+let rebirthCost = 1; // Initial rebirth cost
 const rebirthsElement = document.getElementById('rebirths');
 const scoreElement = document.getElementById('score');
 const countryImage = document.getElementById('countryImage');
@@ -114,6 +108,34 @@ function updateCountryImage() {
         countryImage.src = 'media/BaseCountry.png';
     }
 }
+function updatename() {
+    let nameElement = document.getElementById('name'); // Get the DOM element
+    let name = 'nobody'; // Default name
+
+    if (rebirths >= 10) {
+        name = 'Karl Marx';
+    } else if (rebirths === 9) {
+        name = 'Vladimir Lenin';
+    } else if (rebirths === 8) {
+        name = 'Mao Zedong';
+    } else if (rebirths === 7) {
+        name = 'Che Guevara';
+    } else if (rebirths === 6) {
+        name = 'Joseph Stalin';
+    } else if (rebirths === 5) {
+        name = 'Fidel Castro';
+    } else if (rebirths === 4) {
+        name = 'Ho Chi Minh';
+    } else if (rebirths === 3) {
+        name = 'Leon Trotsky';
+    } else if (rebirths === 2) {
+        name = 'Nikita Khrushchev';
+    } else if (rebirths === 1) {
+        name = 'the northern end';
+    }
+
+    nameElement.innerText = name; // Update the name in the DOM
+}
 
 // Function to handle the rebirth action
 function handleRebirth() {
@@ -128,6 +150,7 @@ function handleRebirth() {
         rebirthButton.innerText = `Cost: ${rebirthCost.toLocaleString()}`; // Update the rebirth button text
         console.log("Country upgraded and score reset to 0");
         updateCountryImage(); // Update the image after resetting the score
+        updatename();
     } else {
         console.log("Not enough money to upgrade the country");
     }
