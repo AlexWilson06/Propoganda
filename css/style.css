@@ -6,7 +6,7 @@
 #container {
   width: 100%;
   height: 200px;
-  overflow-y: scroll;
+  overflow-x: scroll;
   display: block; 
   padding: 10px;
   box-sizing: border-box;
@@ -14,13 +14,12 @@
 #purchasebar {
   width: 100%; /* Full width */
   height: 200px; /* Set a specific height */
-  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-x: scroll; /* Enable vertical scrolling */
   padding: 10px; /* Optional padding */
   box-sizing: border-box; /* Ensure padding is included in the overall width/height */
 }
 #purchasebar > .Cost, .Upgrade, .Infobutton {
   width: 100%; /* Full width within the purchasebar */
-  margin-bottom: 10px; /* Space between divs */
   padding: 10px; /* Optional padding */
   height: auto; /* Adjust height based on content */
   background-color: #f0f0f0; /* Optional background color */
