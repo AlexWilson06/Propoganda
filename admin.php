@@ -15,16 +15,19 @@ if (!isset($_SESSION['loggedin'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Propaganda Clicker: Home Page</title>
     <meta charset="UTF-8">
-    <title>Home Page</title>
-    <link href="css/loginstyle.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="loggedin">
     <nav class="navtop">
         <div>
-            <h1>Admin Page</h1>
             <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>

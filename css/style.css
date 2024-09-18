@@ -24,6 +24,109 @@
   height: auto; /* Adjust height based on content */
   background-color: #f0f0f0; /* Optional background color */
 }
+.loggedin {
+  padding: 20px;
+}
+
+/* Navigation Bar Styling */
+.navtop {
+  background-color: #333;
+  color: #fff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.navtop div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navtop a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px;
+  line-height: 60px;
+}
+
+.navtop a:hover {
+  background-color: #555;
+  color: #f4f4f9;
+}
+
+/* Content styling */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Admin Panel Styles */
+h1, h2 {
+  color: #333;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+li h3 {
+  margin: 0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+a.button:hover {
+  background-color: #0056b3;
+}
 .Cost, .Upgrade, .Infobutton {
   width: 100%;
   margin-bottom: 10px;
