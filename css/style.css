@@ -11,23 +11,9 @@
   padding: 10px;
   box-sizing: border-box;
 }
-#purchasebar {
-  width: 100%; /* Full width */
-  height: 200px; /* Set a specific height */
-  overflow-x: scroll; /* Enable vertical scrolling */
-  padding: 10px; /* Optional padding */
-  box-sizing: border-box; /* Ensure padding is included in the overall width/height */
-}
-#purchasebar > .Cost, .Upgrade, .Infobutton {
-  width: 100%; /* Full width within the purchasebar */
-  padding: 10px; /* Optional padding */
-  height: auto; /* Adjust height based on content */
-  background-color: #f0f0f0; /* Optional background color */
-}
 .loggedin {
   padding: 20px;
 }
-
 /* Navigation Bar Styling */
 .navtop {
   background-color: #333;
@@ -438,15 +424,15 @@ background-color: #2868c7;
   display: flex;
   background-color: white;
   border: 0.5vh solid rgb(49, 49, 49);
-  z-index: 1;
-  overflow-y: auto;
 }
 .Cost, .Upgrade, .Infobutton {
   display: flex;
+  font-size: 20%;
   flex-direction: column;
-  justify-content: space-between;
-  height: auto;
   flex: 1;
+}
+.Cost {
+  width: 10%;
 }
 .btn {
   border: solid black 0.5vh;
@@ -454,10 +440,6 @@ background-color: #2868c7;
   background-color: white;
   cursor: pointer;
   font-family: "Bebas Neue";
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 7vh;
 }
 .btnup {
   border: solid black 0.5vh;
@@ -468,7 +450,6 @@ background-color: #2868c7;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 7vh;
 }
 .btnup:hover {
   transform: scale(1.01);

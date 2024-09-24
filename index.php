@@ -33,11 +33,6 @@
                 <button class="btn">1,100</button>
                 <button class="btn">12,000</button>
                 <button class="btn">130,000</button>
-                <button class="btn">1.4M</button>
-                <button class="btn">20M</button>
-                <button class="btn">330M</button>
-                <button class="btn">5.1B</button>
-                <button class="btn">75B</button>
             </div>
             <div class="Upgrade">
                 <button id="upgrade1" class="btnup">patriotism levels</button>
@@ -45,11 +40,6 @@
                 <button id="upgrade3" class="btnup">corruption levels</button>
                 <button id="upgrade4" class="btnup">Supress Media</button>
                 <button id="upgrade5" class="btnup">Reduce Rights</button>
-                <button id="upgrade6" class="btnup">Child Labour</button>
-                <button id="upgrade7" class="btnup">Surveilance</button>
-                <button id="upgrade8" class="btnup">Monopolise Industry</button>
-                <button id="upgrade9" class="btnup">Re-Education Camps</button>
-                <button id="upgrade10" class="btnup">Complete Domination</button>
             </div>
             <div class="Infobutton">
                 <button class="btn">+0.1/PPC +0.5/sec</button>
@@ -57,6 +47,22 @@
                 <button class="btn">+8/PPC +35/sec</button>
                 <button class="btn">+47/PPC +200/sec</button>
                 <button class="btn">+260/PPC +1000/sec</button>
+</div>
+<div class="Cost">
+                <button class="btn">1.4M</button>
+                <button class="btn">20M</button>
+                <button class="btn">330M</button>
+                <button class="btn">5.1B</button>
+                <button class="btn">75B</button>
+            </div>
+            <div class="Upgrade">
+                <button id="upgrade6" class="btnup">Child Labour</button>
+                <button id="upgrade7" class="btnup">Surveilance</button>
+                <button id="upgrade8" class="btnup">Monopolise Industry</button>
+                <button id="upgrade9" class="btnup">Re-Education Camps</button>
+                <button id="upgrade10" class="btnup">Complete Domination</button>
+            </div>
+            <div class="Infobutton">
                 <button class="btn">+1,400/PPC +7,500/sec</button>
                 <button class="btn">+7,800/PPC +35,000/sec</button>
                 <button class="btn">+44,000/PPC 200,000/sec</button>
