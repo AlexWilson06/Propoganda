@@ -17,15 +17,9 @@
 <a>Statistics</a>
 </div>
 <div class="StatisticsBody">
-  <div class="Statistics">
-    <a>You have clicked _____ times, putting you in the top __% of players</a>
-  </div>
-    <div class="Statistics2">
-      <a>You have currently taken over the country ___ times. The nation is 50,000 sqaure meters, meaning that with this amount, you own as much as ___x the landmass available on earth!</a>
-    </div>
-    <div class="Statistics3">
-      <a>On your best run, you reached a max money of _______ and had ____ people in your mighty nation!</a>
-    </div>
+<a>You have clicked _____ times, putting you in the top __% of players</a><br>
+<a>You have currently taken over the country ___ times. The nation is 50,000 sqaure meters, meaning that with this amount, you own as much as ___x the landmass available on earth!</a><br>
+<a>On your best run, you reached a max money of _______ and had ____ people in your mighty nation!</a><br>
   </div>
 </div>
 </body>

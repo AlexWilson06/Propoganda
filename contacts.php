@@ -11,7 +11,6 @@
 </head>
 <body>
 <?php
-    include ('NavBar.php');
     include ('setup.php');
     include ('process_form.php');
     ?>  

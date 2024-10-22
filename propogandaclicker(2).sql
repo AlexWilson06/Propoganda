@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2024 at 12:38 AM
+-- Generation Time: Oct 22, 2024 at 11:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -76,7 +76,9 @@ INSERT INTO `contacts` (`id`, `first_name`, `lastname`, `email`, `message`, `cre
 (11, 'Taylor', 'Childs', 'minecraft@roblox.gov', 'I like the premise of the Clicker Game and the visual functionality of the country\'s propaganda being spread made me feel more engaged and that the clicking was doing something. I\'d like to see how the upgrade/leveling system would work when completed, I think that would add a level of depth to the basic clicker-game concept.', '2024-07-30 20:29:43'),
 (12, 'hello', '', '', '', '2024-07-30 21:00:18'),
 (13, 'monty', 'todd', 'montygaming@hotmail.com', 'rfhiiwhfiuhewiufjijfarfresngceurnesurfhf hurfehfoiudsa fahrefb', '2024-08-01 03:03:18'),
-(14, 'alex', 'wilson', 'qurtx@doof.com', 'fork spinach in the world', '2024-08-02 00:18:40');
+(14, 'alex', 'wilson', 'qurtx@doof.com', 'fork spinach in the world', '2024-08-02 00:18:40'),
+(15, 'alex', 'wilson', 'aw.waiheke@gmail.com', 'testing feedback', '2024-10-22 20:19:57'),
+(19, 'd', 'd', '2@gmail.com', 'test', '2024-10-22 20:25:49');
 
 -- --------------------------------------------------------
 
@@ -102,8 +104,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `image2`, `title3`, `text3`, `image3`) VALUES
-(1, 'Top 10 Leader board', 'Top Players By Clicks (all time)', '/Propoganda/media/list.png', 'Top players by score', 'This is a list of the top players, and their scores. They are the cream of the crop. The very best of the best. ', '/Propoganda/media/list.png', 'Fastest Clickers', 'This is a list of the fastest clickers. They are the players that have inputted the highest cps. Although most of them have probably used an auto clicker.', '/Propoganda/media/list.png'),
-(2, 'testing', 'what is a test? what is the purpose?', '', '', '', '', '', '', '');
+(1, 'Top 10 Leader board', 'Top Players By Clicks (all time)', '/Propoganda/media/list.png', 'Top players by score', 'This is a list of the top players, and their scores. They are the cream of the crop. The very best of the best. ', '/Propoganda/media/list.png', 'Fastest Clickers', 'This is a list of the fastest clickers. They are the players that have inputted the highest cps. Although most of them have probably used an auto clicker.', '/Propoganda/media/list.png');
 
 --
 -- Indexes for dumped tables
@@ -141,7 +142,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `pages`

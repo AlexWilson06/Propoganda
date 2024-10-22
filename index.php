@@ -14,7 +14,7 @@
     <div class="MainCollumn">
         <div class="Section2">
             <div class="clickerbar">
-                <p>Communist republic of<br><span id="name">nobody</span></p>
+                <p>Communist republic of<br><span id="name"></span></p>
                 <p>Rebirths:<br><span id="rebirths">nil</span></p>
                 <p>Money:<br><span id="score">0</span></p>
                 <div class="clicker-container">
@@ -116,7 +116,6 @@ function updateCountryImage() {
 }
 function updatename() {
     let nameElement = document.getElementById('name'); // Get the DOM element
-    let name = 'nobody'; // Default name
 
     if (rebirths >= 10) {
         name = 'Karl Marx';
@@ -138,6 +137,8 @@ function updatename() {
         name = 'Nikita Khrushchev';
     } else if (rebirths === 1) {
         name = 'the northern end';
+    } else if (rebirths === 0) {
+        name = 'Nobody';
     }
 
     nameElement.innerText = name; // Update the name in the DOM

@@ -425,14 +425,12 @@ background-color: #2868c7;
   background-color: white;
   border: 0.5vh solid rgb(49, 49, 49);
 }
-.Cost, .Upgrade, .Infobutton {
+.Cost, .Infobutton, .Upgrade {
   display: flex;
-  font-size: 20%;
   flex-direction: column;
   flex: 1;
-}
-.Cost {
-  width: 10%;
+  font-size: 700%;
+  height: 100%;
 }
 .btn {
   border: solid black 0.5vh;
