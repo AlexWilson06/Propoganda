@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2024 at 11:06 PM
+-- Generation Time: Oct 23, 2024 at 10:42 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -78,7 +78,8 @@ INSERT INTO `contacts` (`id`, `first_name`, `lastname`, `email`, `message`, `cre
 (13, 'monty', 'todd', 'montygaming@hotmail.com', 'rfhiiwhfiuhewiufjijfarfresngceurnesurfhf hurfehfoiudsa fahrefb', '2024-08-01 03:03:18'),
 (14, 'alex', 'wilson', 'qurtx@doof.com', 'fork spinach in the world', '2024-08-02 00:18:40'),
 (15, 'alex', 'wilson', 'aw.waiheke@gmail.com', 'testing feedback', '2024-10-22 20:19:57'),
-(19, 'd', 'd', '2@gmail.com', 'test', '2024-10-22 20:25:49');
+(19, 'd', 'd', '2@gmail.com', 'test', '2024-10-22 20:25:49'),
+(20, '', '', '', '', '2024-10-23 19:35:07');
 
 -- --------------------------------------------------------
 
@@ -105,6 +106,30 @@ CREATE TABLE `pages` (
 
 INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `image2`, `title3`, `text3`, `image3`) VALUES
 (1, 'Top 10 Leader board', 'Top Players By Clicks (all time)', '/Propoganda/media/list.png', 'Top players by score', 'This is a list of the top players, and their scores. They are the cream of the crop. The very best of the best. ', '/Propoganda/media/list.png', 'Fastest Clickers', 'This is a list of the fastest clickers. They are the players that have inputted the highest cps. Although most of them have probably used an auto clicker.', '/Propoganda/media/list.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tracked user information`
+--
+
+CREATE TABLE `tracked user information` (
+  `TopScore` int(11) NOT NULL,
+  `TopRebirths` int(11) NOT NULL,
+  `TopClicks` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trackeduserinformation`
+--
+
+CREATE TABLE `trackeduserinformation` (
+  `TopScore` int(11) NOT NULL,
+  `TopRebirths` int(11) NOT NULL,
+  `TopClicks` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -142,7 +167,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `pages`
