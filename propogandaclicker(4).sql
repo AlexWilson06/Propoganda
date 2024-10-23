@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2024 at 10:42 PM
+-- Generation Time: Oct 23, 2024 at 11:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -130,6 +130,13 @@ CREATE TABLE `trackeduserinformation` (
   `TopRebirths` int(11) NOT NULL,
   `TopClicks` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `trackeduserinformation`
+--
+
+INSERT INTO `trackeduserinformation` (`TopScore`, `TopRebirths`, `TopClicks`) VALUES
+(0, 0, 0);
 
 --
 -- Indexes for dumped tables

@@ -11,20 +11,23 @@
 </head>
 <body>
 <?php
+session_start();
+print_r($_SESSION);
+die();
 include ('NavBar.php');
 // Include the database connection setup file
 include 'setup.php';
 //print_r ($_POST);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Escape user inputs for security
-    $TopScore = $conn->real_escape_string($_POST['score']);
+    $TopScore = $conn->real_escape_string($_SESSION['score']);
     $TopRebirths = $conn->real_escape_string($_POST['rebirths']);
     $TopClicks = $conn->real_escape_string($_POST['clickcount']);
     // SQL query to insert form data into the contacts table
     $sql = "INSERT INTO trackeduserinformation (score, rebirths, clickcount)
         VALUES ('$TopScore', '$TopRebirths', '$TopClicks')";
     
-   //print $sql;
+   print $sql; die();
     // Execute the query and check if it was successful
         if ($conn->query($sql) === TRUE) {
     echo "Form Sucessfully submitted";

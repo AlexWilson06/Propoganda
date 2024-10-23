@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php include ('NavBar.php'); ?>
+
+    <?php 
+    include ('NavBar.php'); 
+    session_start();
+    $_SESSION['score'] = 100;
+        ?>
     <div class="MainCollumn">
         <div class="Section2">
             <div class="clickerbar">
@@ -25,6 +30,11 @@
         </div>
         <form action="userstats.php" method="POST">
         <div class="SaveIndex">
+    <script>
+    sessionStorage.setItem('score', score);
+    sessionStorage.setItem('rebirth', rebirth);
+    sessionStorage.setItem('clickcount', clickcount);
+    </script>
       <input type="submit" value="Save">
         </div>
         </div>
@@ -190,7 +200,7 @@ function handleUpgrade1() {
         passiveIncome += 0.5 * Math.pow(5, rebirths); // Increase passive income
         score -= 15; // Deduct 50 money
         updateScore(score); // Update the score display
-        console.log("Upgrade purchased: Passive income increased");
+        console.log("Upgrade aspurchased: Passive income increased");
     } else {
         console.log("Not enough money to purchase upgrade");
     }
@@ -204,6 +214,7 @@ function handleUpgrade2() {
         score -= 100; // Deduct 100 money
         updateScore(score); // Update the score display
         console.log("Upgrade purchased: Money per click increased");
+        
     } else {
         console.log("Not enough money to purchase upgrade");
     }
