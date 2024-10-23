@@ -23,8 +23,15 @@
             </div>
             <img id="countryImage" src="media/BaseCountry.png" alt="Country Image" class="rotated-image">
         </div>
+        <form action="userstats.php" method="POST">
+        <div class="SaveIndex">
+      <input type="submit" value="Save">
+        </div>
+        </div>
+        </div>
         <div class="Leaderboard">
             <a href="Leaderboard.php?id=1">Leaderboard</a>
+        </div>
         </div>
         <div class="purchasebar">
             <div class="Cost">
@@ -77,6 +84,7 @@
         </div>
     </div>
     <script>
+let clickcount = 0;
 let score = 0;
 let moneyPerClick = 1;
 let passiveIncome = 0; // Track passive income
