@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2024 at 11:46 PM
+-- Generation Time: Nov 06, 2024 at 11:22 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,7 +45,8 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `activation_code`
 (3, 'Alex', '$2y$10$SmPDAA1FCA6ZWHzs6E6PV.5xP171Yl9Unl5frl0OpZxBNTTLGUoAG', 'aw.waiheke@gmail.com', '66b9b33a37662'),
 (4, 'DaStupidJuice', '$2y$10$PuCErymR0fi/Rq0EoYV10OiihvBJW6a8AmW0LeZd76QWVyknrhOC2', 'aw.waiheke@gmail.com', '66b9ba3a65dc2'),
 (5, 'DaStupidJuices', '$2y$10$MsW947FxYyq/7tr/UnNGw.R7YPKOu.ecps9tJm/vu7bfelHC84cH2', 'wilsona@student.waihekehigh.school.nz', '66bb0bc9c6220'),
-(6, 'admin', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'admin@null.com', '66e242c8b9d8e');
+(6, 'admin', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'admin@null.com', '66e242c8b9d8e'),
+(7, 'Alex2', '$2y$10$Js7yl/dvIJZ1l6VGAD/NmuPeSULcIgzULnjxi.kTfF8iSv028RWKW', 'Alex2@mail.com', '672be7451c022');
 
 -- --------------------------------------------------------
 
@@ -110,33 +111,25 @@ INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `imag
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tracked user information`
---
-
-CREATE TABLE `tracked user information` (
-  `TopScore` int(11) NOT NULL,
-  `TopRebirths` int(11) NOT NULL,
-  `TopClicks` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `trackeduserinformation`
 --
 
 CREATE TABLE `trackeduserinformation` (
+  `ID` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
   `TopScore` int(11) NOT NULL,
   `TopRebirths` int(11) NOT NULL,
-  `TopClicks` int(11) NOT NULL
+  `TopClicks` int(11) NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `trackeduserinformation`
 --
 
-INSERT INTO `trackeduserinformation` (`TopScore`, `TopRebirths`, `TopClicks`) VALUES
-(0, 0, 0);
+INSERT INTO `trackeduserinformation` (`ID`, `userid`, `TopScore`, `TopRebirths`, `TopClicks`, `Date`) VALUES
+(2, 3, 4030, 12, 593, '2024-11-06 22:06:23'),
+(3, 7, 42223, 32, 4543, '2024-11-06 22:07:14');
 
 --
 -- Indexes for dumped tables
@@ -161,6 +154,12 @@ ALTER TABLE `pages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `trackeduserinformation`
+--
+ALTER TABLE `trackeduserinformation`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -168,7 +167,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -181,6 +180,12 @@ ALTER TABLE `contacts`
 --
 ALTER TABLE `pages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `trackeduserinformation`
+--
+ALTER TABLE `trackeduserinformation`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

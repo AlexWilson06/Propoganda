@@ -14,7 +14,6 @@
     <?php 
     include ('NavBar.php'); 
     session_start();
-    $_SESSION['score'] = 100;
         ?>
     <div class="MainCollumn">
         <div class="Section2">
@@ -31,11 +30,12 @@
         <form action="userstats.php" method="POST">
         <div class="SaveIndex">
     <script>
-    sessionStorage.setItem('score', score);
+    rebirth = 2;
     sessionStorage.setItem('rebirth', rebirth);
     sessionStorage.setItem('clickcount', clickcount);
     </script>
       <input type="submit" value="Save">
+
         </div>
         </div>
         </div>
@@ -189,6 +189,7 @@ function updaterebirths(newrebirths) {
 // Function to update the score
 function updateScore(newScore) {
     score = newScore;
+    sessionStorage.setItem('score', score);
     scoreElement.innerText = score.toFixed(0); // Round score to 1 decimal place
     updateCountryImage(); // Update the image whenever the score changes
 }

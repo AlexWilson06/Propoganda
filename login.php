@@ -10,13 +10,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="navbarC">
-        <a href="index.php">Clicker</a>
-        <a href="contacts.php">Feedback</a>
-        <a href="Statistics.php">Statistics</a>
-        <a href="settings.php">Settings</a>
-        <a href="login.html">Profile</a>
-    </div>
+<?php 
+    include ('NavBar.php'); 
+        ?>
     <div class="login">
         <h1>Login</h1>
         <form action="authenticate.php" method="post">
