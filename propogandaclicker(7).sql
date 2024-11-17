@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2024 at 09:57 PM
+-- Generation Time: Nov 17, 2024 at 11:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -46,7 +46,8 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `activation_code`
 (4, 'DaStupidJuice', '$2y$10$PuCErymR0fi/Rq0EoYV10OiihvBJW6a8AmW0LeZd76QWVyknrhOC2', 'aw.waiheke@gmail.com', '66b9ba3a65dc2'),
 (5, 'DaStupidJuices', '$2y$10$MsW947FxYyq/7tr/UnNGw.R7YPKOu.ecps9tJm/vu7bfelHC84cH2', 'wilsona@student.waihekehigh.school.nz', '66bb0bc9c6220'),
 (6, 'admin', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'admin@null.com', '66e242c8b9d8e'),
-(7, 'Alex2', '$2y$10$Js7yl/dvIJZ1l6VGAD/NmuPeSULcIgzULnjxi.kTfF8iSv028RWKW', 'Alex2@mail.com', '672be7451c022');
+(7, 'Alex2', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex2@mail.com', '672be7451c022'),
+(8, 'Alex3', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex3@mail.com', '673a726883f98');
 
 -- --------------------------------------------------------
 
@@ -122,7 +123,8 @@ CREATE TABLE `trackeduserinformation` (
 INSERT INTO `trackeduserinformation` (`ID`, `userid`, `TopScore`, `TopRebirths`, `TopClicks`, `Date`) VALUES
 (1, 3, 4030, 12, 593, '2024-11-17 20:13:37'),
 (2, 7, 42223, 32, 4543, '2024-11-17 20:13:42'),
-(3, 1, 1324543, 15, 4132423, '2024-11-17 20:13:47');
+(3, 1, 1324543, 15, 4132423, '2024-11-17 20:13:47'),
+(4, 7, 4234, 443, 221232, '2024-11-17 21:58:24');
 
 --
 -- Indexes for dumped tables
@@ -160,7 +162,7 @@ ALTER TABLE `trackeduserinformation`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -178,7 +180,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `trackeduserinformation`
 --
 ALTER TABLE `trackeduserinformation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -8,7 +8,7 @@ if (!isset($_POST['username'], $_POST['password'])) {
                  $_SESSION['message'] = $message;
                 header('Location: login.php');
 }
-    if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+    if ($stmt = $conn->prepare('SELECT ID, password FROM accounts WHERE username = ?')) {
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $stmt->store_result();
@@ -22,7 +22,7 @@ if (!isset($_POST['username'], $_POST['password'])) {
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['username'];
-                $_SESSION['id'] = $id;
+                $_SESSION['ID'] = $id;
                 if($_SESSION['name']=="admin"){header('Location: admin.php');}
                 else
                     header('Location: statistics.php');

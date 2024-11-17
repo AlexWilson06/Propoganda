@@ -1,13 +1,10 @@
 <?php
 session_start();
-
 include('setup.php'); 
 include('NavBar.php');
-
-if (isset($_SESSION['userid'])) {
-    $userid = $_SESSION['userid'];
-
-    $sql = "SELECT TopClicks, TopRebirths, TopScore FROM trackeduserinformation WHERE userid = ?";
+if (isset($_SESSION['ID'])) {
+    $userid = $_SESSION['ID'];
+    $sql = "SELECT Date, ID, userid, TopClicks, TopRebirths, TopScore FROM trackeduserinformation WHERE userid = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $userid);
     $stmt->execute();
@@ -18,7 +15,6 @@ if (isset($_SESSION['userid'])) {
     $userData = null;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +39,7 @@ if (isset($_SESSION['userid'])) {
     </style>
 </head>
 <body>
+  
     <h1 style="text-align: center;">Your Statistics</h1>
     <div class="StatisticsBody">
         <?php if ($userData): ?>
@@ -52,6 +49,39 @@ if (isset($_SESSION['userid'])) {
         <?php else: ?>
             <a>No statistics found for your account. Play to generate data!</a>
         <?php endif; ?>
+            <table>
+        <tr>
+            <th>Username</th>
+            <th>Top Score</th>
+            <th>Top Rebirths</th>
+            <th>Top Clicks</th>
+            <th>Date</th>
+        </tr>
+        <?php
+            $userid = $_SESSION['ID'];
+            $sql = "SELECT username, Date, userid, TopClicks, TopRebirths, TopScore FROM trackeduserinformation 
+            LEFT JOIN accounts 
+            ON trackeduserinformation.userid = accounts.id
+            where userid=?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $userid);
+            $stmt->execute();
+            $result = $stmt->get_result();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . htmlspecialchars($row['username']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['TopScore']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['TopRebirths']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['TopClicks']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['Date']) . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='6'>No data found</td></tr>";
+        }
+        ?>
+    </table>
     </div>
 </body>
 </html>

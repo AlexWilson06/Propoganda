@@ -28,6 +28,7 @@
             <img id="countryImage" src="media/BaseCountry.png" alt="Country Image" class="rotated-image">
         </div>
         <form action="userstats.php" method="POST">
+        <input type="hidden" name="hiddeninput" id="hiddeninput">
         <div class="SaveIndex">
     <script>
     rebirth = 2;
