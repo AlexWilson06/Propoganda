@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: index.html');
+    header('Location: index.php');
     exit;
 }
 // Database connection details
@@ -25,7 +25,7 @@ $stmt->close();
 <body class="loggedin">
     <nav class="navtop">
         <div>
-            <h1>Website Title</h1>
+            <h1>Propoganda Clicker</h1>
             <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>

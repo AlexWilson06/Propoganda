@@ -92,7 +92,7 @@
                 <button id="rebirthButton" class="Rebirth">Cost: 1,000,000</button>
             </div>
         </div>
-    </div>
+    </form>
     <script>
 let clickcount = 0;
 let score = 0;

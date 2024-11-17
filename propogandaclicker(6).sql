@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2024 at 11:22 PM
+-- Generation Time: Nov 17, 2024 at 09:57 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -68,19 +68,11 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `first_name`, `lastname`, `email`, `message`, `created_at`) VALUES
-(2, 'Test2', 'Tester2', 'test2@gmail.com', 'testing2', '2024-07-25 23:57:16'),
+(1, 'Test2', 'Tester2', 'test2@gmail.com', 'testing2', '2024-07-25 23:57:16'),
 (3, 'keir', 'finnin', 'finnink@student.waihekehigh.school.nz', 'hello guys', '2024-07-26 00:02:58'),
-(6, 'Adam', 'stinton', 'year13balls@gmail.com', 'Dont do physics at 3 am challenge (we failed) D:<', '2024-07-26 00:27:18'),
-(7, 'brent ', 'ssimpsun', 'simp@simp.com', 'im a simp', '2024-07-29 01:22:40'),
-(9, 'Alex', 'Wilson', 'terabit@gmail.com', '', '2024-07-29 06:20:15'),
-(10, '', '', '', '', '2024-07-29 06:52:15'),
 (11, 'Taylor', 'Childs', 'minecraft@roblox.gov', 'I like the premise of the Clicker Game and the visual functionality of the country\'s propaganda being spread made me feel more engaged and that the clicking was doing something. I\'d like to see how the upgrade/leveling system would work when completed, I think that would add a level of depth to the basic clicker-game concept.', '2024-07-30 20:29:43'),
-(12, 'hello', '', '', '', '2024-07-30 21:00:18'),
 (13, 'monty', 'todd', 'montygaming@hotmail.com', 'rfhiiwhfiuhewiufjijfarfresngceurnesurfhf hurfehfoiudsa fahrefb', '2024-08-01 03:03:18'),
-(14, 'alex', 'wilson', 'qurtx@doof.com', 'fork spinach in the world', '2024-08-02 00:18:40'),
-(15, 'alex', 'wilson', 'aw.waiheke@gmail.com', 'testing feedback', '2024-10-22 20:19:57'),
-(19, 'd', 'd', '2@gmail.com', 'test', '2024-10-22 20:25:49'),
-(20, '', '', '', '', '2024-10-23 19:35:07');
+(15, 'alex', 'wilson', 'aw.waiheke@gmail.com', 'testing feedback', '2024-10-22 20:19:57');
 
 -- --------------------------------------------------------
 
@@ -128,8 +120,9 @@ CREATE TABLE `trackeduserinformation` (
 --
 
 INSERT INTO `trackeduserinformation` (`ID`, `userid`, `TopScore`, `TopRebirths`, `TopClicks`, `Date`) VALUES
-(2, 3, 4030, 12, 593, '2024-11-06 22:06:23'),
-(3, 7, 42223, 32, 4543, '2024-11-06 22:07:14');
+(1, 3, 4030, 12, 593, '2024-11-17 20:13:37'),
+(2, 7, 42223, 32, 4543, '2024-11-17 20:13:42'),
+(3, 1, 1324543, 15, 4132423, '2024-11-17 20:13:47');
 
 --
 -- Indexes for dumped tables
@@ -185,7 +178,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `trackeduserinformation`
 --
 ALTER TABLE `trackeduserinformation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
