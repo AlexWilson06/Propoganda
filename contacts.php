@@ -1,3 +1,8 @@
+<?php
+    include ('setup.php');
+    include ('process_form.php');
+    session_start();
+    ?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +15,6 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php
-    include ('setup.php');
-    include ('process_form.php');
-    ?>  
 <div class="ContactsTitle">
 <a>Feedback/Contact form</a>
 </div>

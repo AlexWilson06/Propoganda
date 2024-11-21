@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header('Location: login.php'); // Redirect to login page
+        exit;
+    }
+    include ('NavBar.php'); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +18,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <?php 
-    include ('NavBar.php'); 
-    session_start();
-        ?>
     <div class="MainCollumn">
         <div class="Section2">
             <div class="clickerbar">
@@ -27,22 +30,20 @@
             </div>
             <img id="countryImage" src="media/BaseCountry.png" alt="Country Image" class="rotated-image">
         </div>
-        <form action="userstats.php" method="POST">
-        <input type="hidden" name="hiddeninput" id="hiddeninput">
-        <div class="SaveIndex">
-    <script>
+        <<form action="userstats.php" method="POST" onsubmit="populateHiddenFields()">
+        <script>
     rebirth = 2;
     sessionStorage.setItem('rebirth', rebirth);
     sessionStorage.setItem('clickcount', clickcount);
     </script>
-      <input type="submit" value="Save">
-
-        </div>
-        </div>
-        </div>
+    <input type="hidden" name="hiddenScore" id="hiddenScore">
+    <input type="hidden" name="hiddenRebirths" id="hiddenRebirths">
+    <div class="SaveIndex">
+        <input type="submit" value="Save">
+    </div>
+</form>
         <div class="Leaderboard">
             <a href="Leaderboard.php?id=1">Leaderboard</a>
-        </div>
         </div>
         <div class="purchasebar">
             <div class="Cost">
@@ -53,12 +54,12 @@
                 <button class="btn">130,000</button>
             </div>
             <div class="Upgrade">
-                <button id="upgrade1" class="btnup">patriotism levels</button>
-                <button id="upgrade2" class="btnup">Increase workers</button>
-                <button id="upgrade3" class="btnup">corruption levels</button>
-                <button id="upgrade4" class="btnup">Supress Media</button>
-                <button id="upgrade5" class="btnup">Reduce Rights</button>
-            </div>
+        <button id="upgrade1" class="btnup" type="button">Patriotism Levels</button>
+        <button id="upgrade2" class="btnup" type="button">Increase Workers</button>
+        <button id="upgrade3" class="btnup" type="button">Corruption Levels</button>
+        <button id="upgrade4" class="btnup" type="button">Suppress Media</button>
+        <button id="upgrade5" class="btnup" type="button">Reduce Rights</button>
+    </div>
             <div class="Infobutton">
                 <button class="btn">+0.1/PPC +0.5/sec</button>
                 <button class="btn">+1/PPC +4/sec</button>
@@ -73,13 +74,13 @@
                 <button class="btn">5.1B</button>
                 <button class="btn">75B</button>
             </div>
-            <div class="Upgrade">
-                <button id="upgrade6" class="btnup">Child Labour</button>
-                <button id="upgrade7" class="btnup">Surveilance</button>
-                <button id="upgrade8" class="btnup">Monopolise Industry</button>
-                <button id="upgrade9" class="btnup">Re-Education Camps</button>
-                <button id="upgrade10" class="btnup">Complete Domination</button>
-            </div>
+    <div class="Upgrade">
+        <button id="upgrade6" class="btnup" type="button">Child Labour</button>
+        <button id="upgrade7" class="btnup" type="button">Surveillance</button>
+        <button id="upgrade8" class="btnup" type="button">Monopolise Industry</button>
+        <button id="upgrade9" class="btnup" type="button">Re-Education Camps</button>
+        <button id="upgrade10" class="btnup" type="button">Complete Domination</button>
+    </div>
             <div class="Infobutton">
                 <button class="btn">+1,400/PPC +7,500/sec</button>
                 <button class="btn">+7,800/PPC +35,000/sec</button>
@@ -87,20 +88,18 @@
                 <button class="btn">+260,000/PPC +1.25M/sec</button>
                 <button class="btn">+1.6M/PPC +8M/sec</button>
 </div>
-            </div>
+</div>
             <div class="Upgradetext">
                 <p>Improve Leadership</p>
-                <button id="rebirthButton" class="Rebirth">Cost: 1,000,000</button>
+                <button id="rebirthButton" class="Rebirth" type="button">Cost: 1,000,000</button>
             </div>
-        </div>
-    </form>
     <script>
 let clickcount = 0;
 let score = 0;
 let moneyPerClick = 1;
 let passiveIncome = 0; // Track passive income
 let rebirths = 0;
-let rebirthCost = 1; // Initial rebirth cost
+let rebirthCost = 1000000; // Initial rebirth cost
 const rebirthsElement = document.getElementById('rebirths');
 const scoreElement = document.getElementById('score');
 const countryImage = document.getElementById('countryImage');

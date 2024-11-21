@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 session_start();
 // Redirect to login page if user is not logged in
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: index.html');
+    header('Location: index.php');
     exit;
 }
 ?>
