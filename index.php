@@ -32,12 +32,12 @@
         </div>
         <form action="userstats.php" method="POST" onsubmit="populateHiddenFields()">
         <script>
-    rebirth = 2;
     sessionStorage.setItem('rebirth', rebirth);
     sessionStorage.setItem('clickcount', clickcount);
     </script>
     <input type="hidden" name="hiddenScore" id="hiddenScore">
     <input type="hidden" name="hiddenRebirths" id="hiddenRebirths">
+    <input type="hidden" name="hiddenClickCount" id="hiddenClickCount">
     <div class="SaveIndex">
         <input type="submit" value="Save">
     </div>
@@ -94,8 +94,8 @@
                 <button id="rebirthButton" class="Rebirth" type="button">Cost: 1,000,000</button>
             </div>
     <script>
-let clickcount = 0;
 let score = 0;
+let clickcount = 0;
 let moneyPerClick = 1;
 let passiveIncome = 0; // Track passive income
 let rebirths = 0;
@@ -109,11 +109,12 @@ function populateHiddenFields() {
     // Get the dynamic values from the visible elements
     const displayedScore = document.getElementById('score').innerText; // Assuming <span id="score">
     const displayedRebirths = document.getElementById('rebirths').innerText; // Assuming <span id="rebirths">
+    const displayedClickCount = sessionStorage.getItem('clickcount') || clickcount;
 
     // Populate the hidden fields with the dynamic values
     document.getElementById('hiddenScore').value = displayedScore;
     document.getElementById('hiddenRebirths').value = displayedRebirths;
-
+    document.getElementById('hiddenClickCount').value = displayedClickCount;
     console.log("Hidden fields populated:", displayedScore, displayedRebirths);
 }
 // Function to update the country image based on the score
