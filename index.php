@@ -30,7 +30,7 @@
             </div>
             <img id="countryImage" src="media/BaseCountry.png" alt="Country Image" class="rotated-image">
         </div>
-        <<form action="userstats.php" method="POST" onsubmit="populateHiddenFields()">
+        <form action="userstats.php" method="POST" onsubmit="populateHiddenFields()">
         <script>
     rebirth = 2;
     sessionStorage.setItem('rebirth', rebirth);
@@ -105,7 +105,17 @@ const scoreElement = document.getElementById('score');
 const countryImage = document.getElementById('countryImage');
 const clickerButton = document.getElementById('clicker');
 const rebirthButton = document.getElementById('rebirthButton');
+function populateHiddenFields() {
+    // Get the dynamic values from the visible elements
+    const displayedScore = document.getElementById('score').innerText; // Assuming <span id="score">
+    const displayedRebirths = document.getElementById('rebirths').innerText; // Assuming <span id="rebirths">
 
+    // Populate the hidden fields with the dynamic values
+    document.getElementById('hiddenScore').value = displayedScore;
+    document.getElementById('hiddenRebirths').value = displayedRebirths;
+
+    console.log("Hidden fields populated:", displayedScore, displayedRebirths);
+}
 // Function to update the country image based on the score
 function updateCountryImage() {
     if (passiveIncome >= 100000000) {
