@@ -1,10 +1,43 @@
 <?php 
-    session_start();
-    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        header('Location: login.php'); // Redirect to login page
-        exit;
+ini_set('session.cookie_path', '/');
+session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: login.php');
+    exit;
+}
+
+// Include additional files
+include('NavBar.php');
+include('setup.php');
+?>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $hiddenScore = isset($_POST['hiddenScore']) ? $_POST['hiddenScore'] : null;
+    $hiddenRebirths = isset($_POST['hiddenRebirths']) ? $_POST['hiddenRebirths'] : null;
+    $hiddenClickCount = isset($_POST['hiddenClickCount']) ? $_POST['hiddenClickCount'] : null;
+    $userId = $_SESSION['userId'] ?? null; // Retrieve from session if the user is logged in
+
+    if ($userId && $hiddenScore !== null && $hiddenRebirths !== null && $hiddenClickCount !== null) {
+        // Use a prepared statement to safely insert data
+        $stmt = $conn->prepare("INSERT INTO your_table (user_id, score, rebirths, click_count, date) VALUES (?, ?, ?, ?, NOW())");
+        $stmt->bind_param("iiii", $userId, $hiddenScore, $hiddenRebirths, $hiddenClickCount);
+
+        if ($stmt->execute()) {
+            echo "New score saved successfully.";
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+
+        $stmt->close();
+    } else {
+        if (empty($_POST['hiddenScore']) || empty($_POST['hiddenRebirths']) || empty($_POST['hiddenClickCount'])) {
+            echo "All fields must be filled and user must be logged in.";
+        }        
     }
-    include ('NavBar.php'); 
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,21 +62,6 @@
                 </div>
             </div>
             <img id="countryImage" src="media/BaseCountry.png" alt="Country Image" class="rotated-image">
-        </div>
-        <form action="userstats.php" method="POST" onsubmit="populateHiddenFields()">
-        <script>
-    sessionStorage.setItem('rebirth', rebirth);
-    sessionStorage.setItem('clickcount', clickcount);
-    </script>
-    <input type="hidden" name="hiddenScore" id="hiddenScore">
-    <input type="hidden" name="hiddenRebirths" id="hiddenRebirths">
-    <input type="hidden" name="hiddenClickCount" id="hiddenClickCount">
-    <div class="SaveIndex">
-        <input type="submit" value="Save">
-    </div>
-</form>
-        <div class="Leaderboard">
-            <a href="Leaderboard.php?id=1">Leaderboard</a>
         </div>
         <div class="purchasebar">
             <div class="Cost">
@@ -106,16 +124,15 @@ const countryImage = document.getElementById('countryImage');
 const clickerButton = document.getElementById('clicker');
 const rebirthButton = document.getElementById('rebirthButton');
 function populateHiddenFields() {
-    // Get the dynamic values from the visible elements
-    const displayedScore = document.getElementById('score').innerText; // Assuming <span id="score">
-    const displayedRebirths = document.getElementById('rebirths').innerText; // Assuming <span id="rebirths">
-    const displayedClickCount = sessionStorage.getItem('clickcount') || clickcount;
+    const displayedScore = score;
+    const displayedRebirths = rebirths;
+    const displayedClickCount = clickcount;
 
-    // Populate the hidden fields with the dynamic values
     document.getElementById('hiddenScore').value = displayedScore;
     document.getElementById('hiddenRebirths').value = displayedRebirths;
     document.getElementById('hiddenClickCount').value = displayedClickCount;
-    console.log("Hidden fields populated:", displayedScore, displayedRebirths);
+
+    console.log("Hidden fields populated:", displayedScore, displayedRebirths, displayedClickCount);
 }
 // Function to update the country image based on the score
 function updateCountryImage() {
@@ -361,5 +378,13 @@ document.getElementById("upgrade8").addEventListener("click", handleUpgrade8);
 document.getElementById("upgrade9").addEventListener("click", handleUpgrade9);
 document.getElementById("upgrade10").addEventListener("click", handleUpgrade10);
     </script>
+<form action="index.php" method="POST" onsubmit="populateHiddenFields()">
+    <input type="hidden" name="hiddenScore" id="hiddenScore">
+    <input type="hidden" name="hiddenRebirths" id="hiddenRebirths">
+    <input type="hidden" name="hiddenClickCount" id="hiddenClickCount">
+    <div class="SaveIndex">
+        <input type="submit" value="Save">
+    </div>
+</form>
 </body>
 </html>

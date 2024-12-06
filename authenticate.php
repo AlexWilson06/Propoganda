@@ -1,12 +1,16 @@
 <?php
+ini_set('session.cookie_path', '/');
 session_start();
+echo "<pre>";
+print_r($_SESSION); // Display all session variables
+echo "</pre>";
 include 'setup.php';
 print_r($_POST); print_r($_SESSION);//die();
 if (!isset($_POST['username'], $_POST['password'])) {
-    exit('Please fill both the username and password fields!');
- $message= 'please use username and/or password!';
-                 $_SESSION['message'] = $message;
-                header('Location: login.php');
+    $message = 'Please use username and/or password!';
+    $_SESSION['message'] = $message;
+    header('Location: login.php');
+    exit();
 }
     if ($stmt = $conn->prepare('SELECT ID, password FROM accounts WHERE username = ?')) {
         $stmt->bind_param('s', $_POST['username']);
@@ -27,13 +31,13 @@ if (!isset($_POST['username'], $_POST['password'])) {
                 else
                     header('Location: statistics.php');
             } else {
-                $message= 'Incorrect username and/or password!';
+                $message= 'Incorrect username and/or password! Something went wrong!';
                  $_SESSION['message'] = $message;
                 header('Location: login.php');
             }
         } else {
-            echo 'Incorrect username and/or password!';
-            header('Location: index.php');
+            echo 'Something went wrong!';
+            header('Location: login.php');
         }
         $stmt->close();
     }

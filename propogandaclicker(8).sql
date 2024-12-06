@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2024 at 11:53 PM
+-- Generation Time: Dec 06, 2024 at 06:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,23 +31,22 @@ CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `activation_code` varchar(50) DEFAULT ''
+  `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `activation_code`) VALUES
-(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', ''),
-(2, 'tester', '$2y$10$hK4mUMJHXbFClJ4l2Tkd/eeqAv3QEtWydJ/P.CmCoJHN5K9XbBbxi', 'test@gmail.com', '66b9b316dadb8'),
-(3, 'Alex', '$2y$10$SmPDAA1FCA6ZWHzs6E6PV.5xP171Yl9Unl5frl0OpZxBNTTLGUoAG', 'aw.waiheke@gmail.com', '66b9b33a37662'),
-(4, 'DaStupidJuice', '$2y$10$PuCErymR0fi/Rq0EoYV10OiihvBJW6a8AmW0LeZd76QWVyknrhOC2', 'aw.waiheke@gmail.com', '66b9ba3a65dc2'),
-(5, 'DaStupidJuices', '$2y$10$MsW947FxYyq/7tr/UnNGw.R7YPKOu.ecps9tJm/vu7bfelHC84cH2', 'wilsona@student.waihekehigh.school.nz', '66bb0bc9c6220'),
-(6, 'admin', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'admin@null.com', '66e242c8b9d8e'),
-(7, 'Alex2', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex2@mail.com', '672be7451c022'),
-(8, 'Alex3', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex3@mail.com', '673a726883f98');
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
+(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com'),
+(2, 'tester', '$2y$10$hK4mUMJHXbFClJ4l2Tkd/eeqAv3QEtWydJ/P.CmCoJHN5K9XbBbxi', 'test@gmail.com'),
+(3, 'Alex', '$2y$10$SmPDAA1FCA6ZWHzs6E6PV.5xP171Yl9Unl5frl0OpZxBNTTLGUoAG', 'aw.waiheke@gmail.com'),
+(4, 'DaStupidJuice', '$2y$10$PuCErymR0fi/Rq0EoYV10OiihvBJW6a8AmW0LeZd76QWVyknrhOC2', 'aw.waiheke@gmail.com'),
+(5, 'DaStupidJuices', '$2y$10$MsW947FxYyq/7tr/UnNGw.R7YPKOu.ecps9tJm/vu7bfelHC84cH2', 'wilsona@student.waihekehigh.school.nz'),
+(6, 'admin', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'admin@null.com'),
+(7, 'Alex2', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex2@mail.com'),
+(8, 'Alex3', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex3@mail.com');
 
 -- --------------------------------------------------------
 

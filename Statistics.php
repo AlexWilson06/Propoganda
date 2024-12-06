@@ -1,4 +1,5 @@
 <?php
+ini_set('session.cookie_path', '/');
 session_start();
 include('setup.php'); 
 include('NavBar.php');
@@ -44,8 +45,8 @@ if (isset($_SESSION['ID'])) {
     <div class="StatisticsBody">
         <?php if ($userData): ?>
             <a>You have clicked <?= htmlspecialchars($userData['TopClicks']) ?> times, putting you in the top <?= round(($userData['TopClicks'] / 100000) * 100, 2) ?>% of players.</a><br>
-            <a>You have currently taken over the country <?= htmlspecialchars($userData['TopRebirths']) ?> times. The nation is 50,000 square meters, meaning that with this amount, you own as much as <?= round(($userData['TopRebirths'] * 50000) / 510100000, 2) ?>x the landmass available on Earth!</a><br>
-            <a>On your best run, you reached a max money of <?= number_format(htmlspecialchars($userData['TopScore'])) ?> and had <?= number_format(htmlspecialchars($userData['TopClicks'] * 10)) ?> people in your mighty nation!</a><br>
+            <a>You have currently taken over the country <?= htmlspecialchars($userData['TopRebirths']) ?> times. The nation is 500,000 square meters, meaning that with this amount, you own as much as <?= round(($userData['TopRebirths'] * 500000) / 149000000, 2) ?>x the landmass available on Earth!</a><br>
+            <a>On your best run, you reached a max money of <?= number_format(htmlspecialchars($userData['TopScore'])) ?> and had <?= number_format(htmlspecialchars($userData['TopClicks'] * 7)) ?> people in your mighty nation!</a><br>
         <?php else: ?>
             <a>No statistics found for your account. Play to generate data!</a>
         <?php endif; ?>
