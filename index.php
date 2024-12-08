@@ -14,28 +14,35 @@ include('NavBar.php');
 include('setup.php');
 ?>
 <?php
+var_dump($_SESSION);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hiddenScore = isset($_POST['hiddenScore']) ? $_POST['hiddenScore'] : null;
     $hiddenRebirths = isset($_POST['hiddenRebirths']) ? $_POST['hiddenRebirths'] : null;
     $hiddenClickCount = isset($_POST['hiddenClickCount']) ? $_POST['hiddenClickCount'] : null;
-    $userId = $_SESSION['userId'] ?? null; // Retrieve from session if the user is logged in
+    $userid = $_SESSION['ID'] ?? null; // Retrieve from session if the user is logged in
 
-    if ($userId && $hiddenScore !== null && $hiddenRebirths !== null && $hiddenClickCount !== null) {
-        // Use a prepared statement to safely insert data
-        $stmt = $conn->prepare("INSERT INTO your_table (user_id, score, rebirths, click_count, date) VALUES (?, ?, ?, ?, NOW())");
-        $stmt->bind_param("iiii", $userId, $hiddenScore, $hiddenRebirths, $hiddenClickCount);
-
+    if ($userid && is_numeric($hiddenScore) && is_numeric($hiddenRebirths) && is_numeric($hiddenClickCount)) {
+        $stmt = $conn->prepare("INSERT INTO trackeduserinformation (userid, TopScore, TopRebirths, TopClicks, Date) VALUES (?, ?, ?, ?, NOW())");
+        $stmt->bind_param("iiii", $userid, $hiddenScore, $hiddenRebirths, $hiddenClickCount);
         if ($stmt->execute()) {
             echo "New score saved successfully.";
         } else {
-            echo "Error: " . $stmt->error;
+            echo "Debug: userid = $userid, hiddenScore = $hiddenScore, hiddenRebirths = $hiddenRebirths, hiddenClickCount = $hiddenClickCount";
         }
-
         $stmt->close();
     } else {
-        if (empty($_POST['hiddenScore']) || empty($_POST['hiddenRebirths']) || empty($_POST['hiddenClickCount'])) {
-            echo "All fields must be filled and user must be logged in.";
-        }        
+        if (!is_numeric($hiddenScore)) {
+            echo "Debug: hiddenScore is invalid: $hiddenScore<br>";
+        }
+        if (!is_numeric($hiddenRebirths)) {
+            echo "Debug: hiddenRebirths is invalid: $hiddenRebirths<br>";
+        }
+        if (!is_numeric($hiddenClickCount)) {
+            echo "Debug: hiddenClickCount is invalid: $hiddenClickCount<br>";
+        }    
+        if (!$userid) {
+            echo "Debug: User ID is missing or not set.<br>";
+        }
     }
 }
 ?>
@@ -117,7 +124,7 @@ let clickcount = 0;
 let moneyPerClick = 1;
 let passiveIncome = 0; // Track passive income
 let rebirths = 0;
-let rebirthCost = 1000000; // Initial rebirth cost
+let rebirthCost = 1000000;
 const rebirthsElement = document.getElementById('rebirths');
 const scoreElement = document.getElementById('score');
 const countryImage = document.getElementById('countryImage');

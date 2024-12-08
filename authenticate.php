@@ -26,13 +26,11 @@ if (!isset($_POST['username'], $_POST['password'])) {
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['username'];
-                $_SESSION['ID'] = $id;
+                $_SESSION['ID'] = $id; 
                 if($_SESSION['name']=="admin"){header('Location: admin.php');}
                 else
                     header('Location: statistics.php');
             } else {
-                $message= 'Incorrect username and/or password! Something went wrong!';
-                 $_SESSION['message'] = $message;
                 header('Location: login.php');
             }
         } else {
