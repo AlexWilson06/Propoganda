@@ -14,7 +14,6 @@ include('NavBar.php');
 include('setup.php');
 ?>
 <?php
-var_dump($_SESSION);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hiddenScore = isset($_POST['hiddenScore']) ? $_POST['hiddenScore'] : null;
     $hiddenRebirths = isset($_POST['hiddenRebirths']) ? $_POST['hiddenRebirths'] : null;
