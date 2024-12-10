@@ -32,12 +32,13 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
 		echo 'Username exists, please choose another!';
 	} else {
 // Username doesn't exists, insert new account
-if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email)')) {
+if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)')) {
 	// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $uniqid = uniqid();
-    $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
+    $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
 	$stmt->execute();
+	header('Location: login.php');
 } else {
 	// Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
 	echo 'Could not prepare statement!';

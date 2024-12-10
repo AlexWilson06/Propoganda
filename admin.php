@@ -64,8 +64,8 @@ $sql = "SELECT
             trackeduserinformation.Date 
         FROM trackeduserinformation 
         LEFT JOIN accounts 
-        ON trackeduserinformation.userid = accounts.id";
-
+        ON trackeduserinformation.userid = accounts.id
+        ORDER BY TopScore DESC";
 $result = $conn->query($sql);
 ?>
 <html>

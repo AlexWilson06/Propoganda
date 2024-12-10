@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 include('NavBar.php');
 include('setup.php');
 ?>
-<?php
+<?php   
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hiddenScore = isset($_POST['hiddenScore']) ? $_POST['hiddenScore'] : null;
     $hiddenRebirths = isset($_POST['hiddenRebirths']) ? $_POST['hiddenRebirths'] : null;

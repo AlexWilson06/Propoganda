@@ -63,7 +63,8 @@ if (isset($_SESSION['ID'])) {
             $sql = "SELECT username, Date, userid, TopClicks, TopRebirths, TopScore FROM trackeduserinformation 
             LEFT JOIN accounts 
             ON trackeduserinformation.userid = accounts.id
-            where userid=?";
+            where userid=?
+            ORDER BY TopScore DESC";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("i", $userid);
             $stmt->execute();

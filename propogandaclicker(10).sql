@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2024 at 10:40 AM
+-- Generation Time: Dec 10, 2024 at 09:36 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -47,7 +47,9 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
 (6, 'admin', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'admin@null.com'),
 (7, 'Alex2', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex2@mail.com'),
 (8, 'Alex3', '$2y$10$Q6GxIt1AVmOHSvlDAg2gye/U1XAwPAlwJ8NLM0QDq1K/CwQyO/Ed2', 'Alex3@mail.com'),
-(9, 'testacc', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'testacc@mail.com');
+(9, 'testacc', '$2y$10$DtE9Ov8K3hWJrTr/Lu773OcEESoZao3bUITNvm7/eLhO6sY2FItg.', 'testacc@mail.com'),
+(10, 'newuser', '$2y$10$B0myiFKl0mGAI5xWulbfr.jWvmznqg4BCxwwRMXZICTwnm4zEvcEi', 'newuser@mail.com'),
+(11, 'newuseragain', '$2y$10$TPgm02VP1THw6Vj4q5M7g.1xKXzuNWBkEQU/phkjmSbvWSG6mLG0G', 'newuseragain@mail.com');
 
 -- --------------------------------------------------------
 
@@ -126,7 +128,8 @@ INSERT INTO `trackeduserinformation` (`ID`, `userid`, `TopScore`, `TopRebirths`,
 (3, 1, 1324543, 15, 4132423, '2024-11-17 20:13:47'),
 (4, 7, 4234, 443, 221232, '2024-11-17 21:58:24'),
 (6, 7, 100, 0, 50, '2024-12-08 09:15:40'),
-(7, 7, 10, 0, 10, '2024-12-08 09:34:29');
+(7, 7, 10, 0, 10, '2024-12-08 09:34:29'),
+(8, 7, 10, 0, 10, '2024-12-08 09:43:44');
 
 --
 -- Indexes for dumped tables
@@ -164,7 +167,7 @@ ALTER TABLE `trackeduserinformation`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -182,7 +185,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `trackeduserinformation`
 --
 ALTER TABLE `trackeduserinformation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
